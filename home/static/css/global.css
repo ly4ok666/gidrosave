@@ -624,6 +624,16 @@ body #header.down {
 	margin-top: 4px;
 }
 .primary-footer p {
+	/*width: 220px;*/
+  	margin: 0 0 1em 0;
+	overflow: hidden;
+	display: -webkit-box;
+  	-webkit-line-clamp: 9;
+  	-webkit-box-orient: vertical;
+	/*font-size: 16px;*/
+	/*line-height: 27px;*/
+	/*color: 636364;*/
+	margin-bottom: 0;
 	font-size: 15px;
 	line-height: 24px;
 	color: #767381;

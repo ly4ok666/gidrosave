@@ -18,6 +18,8 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 def home(request):
     """Домашняя страница нашего проекта"""
     contexts = Home.objects.all()
+    # краткое о нас
+    context = About.objects.all()
     return render(request, 'index.html', locals())
 
 def about(request):
@@ -28,6 +30,8 @@ def about(request):
 def content(request,article_id=1):
     # article = {'article': Article.objects.get(id=article_id)}
     #Вывод всех статей и пагинация (2 статьи на страницу)"""
+    # краткое о нас
+    abouts = About.objects.all()
     all_Articles = Article.objects.all()
     paginator = Paginator(all_Articles, 4)
     page = request.GET.get('page')
@@ -58,6 +62,7 @@ from django.template.loader import get_template
 
     # our view
 def contact(request):
+    abouts = About.objects.all()
     form_class = ContactForm
          # new logic!
     if request.method == 'POST':
@@ -77,8 +82,7 @@ def contact(request):
         # Переходим на другую страницу, если сообщение отправлено
 #         return HttpResponseRedirect('/contacts/thanks/')
     return render(request, 'contacts/contacts.html', {
-        'form': form_class,
-    })
+        'form': form_class,'abouts': abouts,})
 #
 # def thanks(reguest):
 #     thanks = 'thanks'

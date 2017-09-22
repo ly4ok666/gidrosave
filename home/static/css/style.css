@@ -156,10 +156,20 @@
 	padding-left: 39px;
 }
 #slider .bottom-sec p {
+	/*width: 220px;*/
+  	margin: 0 0 1em 0;
+	overflow: hidden;
+	display: -webkit-box;
+  	-webkit-line-clamp: 5;
+  	-webkit-box-orient: vertical;
 	font-size: 16px;
+	/*line-height: 27px;*/
+	/*color: 636364;*/
+	margin-bottom: 0;
+	/*font-size: 16px;*/
 	line-height: 24px;
 	color: #c3c5c8;
-	padding-bottom: 15px;
+	padding-bottom: 8px;
 	width: 90%;
 	padding-left: 39px;
 }
