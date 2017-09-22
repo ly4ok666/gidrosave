@@ -124,7 +124,7 @@
 											<!--</ul>-->
 										<!--</li>-->
 										<li>
-											<a href="#">Контакты</a>
+											<a href="{% url 'home:contact' %}">Контакты</a>
 											<!--Возможное подменю-->
 											<!--<ul class="submenu">-->
 												<!--<li>-->
@@ -145,14 +145,13 @@
 										</li>
 									</ul>
 								</nav>
-								<a href="#" class="quote">Задать вопрос</a>
+								<a href="{% url 'home:contact' %}" class="quote">Задать вопрос</a>
 							</div>
 
 						</div>
 					</div>
 				</div>
-
-			</header>
+		</header>
 			<!--header Section End Here -->
 
 
@@ -200,206 +199,12 @@
 										{% autoescape off %}{{ about.about_text }}{% endautoescape %}
 									</p>
 								</div>
-
 							</div>
 							{% endfor %}
-							<!--<div class="col-xs-12 col-sm-6 ">-->
-								<!--<div class="about-img">-->
-									<!--<img src="{% static 'img/image-16.jpg' %}" alt="" class="coll" />-->
-									<!--&lt;!&ndash;<img src="assets/img/image-17.jpg" alt="" />&ndash;&gt;-->
-									<!--&lt;!&ndash;<img src="assets/img/image-18.jpg" alt="" />&ndash;&gt;-->
-								<!--</div>-->
-							<!--</div>-->
-
 						</div>
 					</div>
 				</div>
-
-				<!--<div class="info-aboutus clearfix">-->
-					<!--<div class="left-banner fade-effect">-->
-						<!--<img src="assets/img/laft-banner-img.jpg" alt=""/>-->
-					<!--</div>-->
-					<!--<div class="container">-->
-						<!--<div class="row">-->
-							<!--<div class="col-xs-12">-->
-
-								<!--<div class="msg-slider animate-effect">-->
-									<!--<ul>-->
-										<!--<li>-->
-											<!--<div class="msg-box">-->
-												<!--<strong>CHAIRMAN MESSAGE</strong>-->
-												<!--<p>-->
-													<!--Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the  with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.-->
-												<!--</p>-->
-												<!--<strong>- Richard Parker, Chairman</strong>-->
-											<!--</div>-->
-											<!--<div class="award-box">-->
-												<!--<img src="assets/img/image-20.jpg" alt="" />-->
-												<!--<strong>AWARDS</strong>-->
-												<!--<img src="assets/img/image-19.jpg" alt="" />-->
-											<!--</div>-->
-										<!--</li>-->
-										<!--<li>-->
-											<!--<div class="msg-box">-->
-												<!--<strong>CHAIRMAN MESSAGE 2</strong>-->
-												<!--<p>-->
-													<!--Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the  with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.-->
-												<!--</p>-->
-												<!--<strong>- Richard Parker, Chairman</strong>-->
-											<!--</div>-->
-											<!--<div class="award-box">-->
-												<!--<img src="assets/img/image-20.jpg" alt="" />-->
-												<!--<strong>AWARDS 2</strong>-->
-												<!--<img src="assets/img/image-19.jpg" alt="" />-->
-											<!--</div>-->
-										<!--</li>-->
-										<!--<li>-->
-											<!--<div class="msg-box">-->
-												<!--<strong>CHAIRMAN MESSAGE 3</strong>-->
-												<!--<p>-->
-													<!--Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the  with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.-->
-												<!--</p>-->
-												<!--<strong>- Richard Parker, Chairman</strong>-->
-											<!--</div>-->
-											<!--<div class="award-box">-->
-												<!--<img src="assets/img/image-20.jpg" alt="" />-->
-												<!--<strong>AWARDS 3</strong>-->
-												<!--<img src="assets/img/image-19.jpg" alt="" />-->
-											<!--</div>-->
-										<!--</li>-->
-									<!--</ul>-->
-								<!--</div>-->
-
-								<!--<div class="our-detail animate-effect">-->
-									<!--<div class="box">-->
-										<!--<i class="icon-history"></i>-->
-										<!--<strong>COMPANY HISTORY</strong>-->
-										<!--<p>-->
-											<!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ornare odio et massa dignissim, at accumsan metus viverra. Integer neque lectus.-->
-										<!--</p>-->
-									<!--</div>-->
-									<!--<div class="box">-->
-										<!--<i class="icon-mission"></i>-->
-										<!--<strong>OUR MISSION</strong>-->
-										<!--<p>-->
-											<!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ornare odio et massa dignissim, at accumsan metus viverra. Integer neque lectus.-->
-										<!--</p>-->
-									<!--</div>-->
-								<!--</div>-->
-							<!--</div>-->
-						<!--</div>-->
-					<!--</div>-->
-
-				<!--</div>-->
-
-				<!--<div class="our-team-container">-->
-					<!--<div class="container">-->
-						<!--<div class="row">-->
-							<!--<div class="col-xs-12">-->
-								<!--<h3>OUR TEAM <i></i></h3>-->
-								<!--<h4>WE OFFER AN ALL ROUND CONDO REMODELLING SERVICES</h4>-->
-								<!--<div class="our-team-detail">-->
-									<!--<ul>-->
-										<!--<li class="zoom">-->
-											<!--<div class="box clearfix">-->
-												<!--<figure class="img-box fade-effect">-->
-													<!--<a href="#"><img src="assets/img/tm-4.jpg" alt="" /></a>-->
-												<!--</figure>-->
-												<!--<div class="detail-box animate-effect">-->
-													<!--<span class="name"><a href="#">GEORGE QUICK</a></span>-->
-													<!--<span class="designation">CEO and Board Member <i></i></span>-->
-													<!--<p>-->
-														<!--Lorem ipsum dolor sit amet, consectetur adipiscing elitInteger ornare odio .-->
-													<!--</p>-->
-													<!--<div class="social-list clearfix">-->
-
-														<!--<a class="fa fa-facebook" href="#"></a>-->
-
-														<!--<a class="fa fa-twitter" href="#"></a>-->
-
-														<!--<a class="fa fa-google-plus" href="#"></a>-->
-
-													<!--</div>-->
-												<!--</div>-->
-											<!--</div>-->
-										<!--</li>-->
-										<!--<li class="zoom">-->
-											<!--<div class="box clearfix">-->
-												<!--<figure class="img-box fade-effect">-->
-													<!--<a href="#"><img src="assets/img/tm-5.jpg" alt="" /></a>-->
-												<!--</figure>-->
-												<!--<div class="detail-box animate-effect">-->
-													<!--<span class="name"><a href="#">GEORGE QUICK</a></span>-->
-													<!--<span class="designation">CEO and Board Member <i></i></span>-->
-													<!--<p>-->
-														<!--Lorem ipsum dolor sit amet, consectetur adipiscing elitInteger ornare odio .-->
-													<!--</p>-->
-													<!--<div class="social-list clearfix">-->
-
-														<!--<a class="fa fa-facebook" href="#"></a>-->
-
-														<!--<a class="fa fa-twitter" href="#"></a>-->
-
-														<!--<a class="fa fa-google-plus" href="#"></a>-->
-
-													<!--</div>-->
-												<!--</div>-->
-											<!--</div>-->
-										<!--</li>-->
- 										<!--<li class="zoom">-->
-											<!--<div class="box clearfix">-->
-												<!--<figure class="img-box fade-effect">-->
-													<!--<a href="#"><img src="assets/img/tm-6.jpg" alt="" /></a>-->
-												<!--</figure>-->
-												<!--<div class="detail-box animate-effect">-->
-													<!--<span class="name"><a href="#">GEORGE QUICK</a></span>-->
-													<!--<span class="designation">CEO and Board Member <i></i></span>-->
-													<!--<p>-->
-														<!--Lorem ipsum dolor sit amet, consectetur adipiscing elitInteger ornare odio .-->
-													<!--</p>-->
-													<!--<div class="social-list clearfix">-->
-
-														<!--<a class="fa fa-facebook" href="#"></a>-->
-
-														<!--<a class="fa fa-twitter" href="#"></a>-->
-
-														<!--<a class="fa fa-google-plus" href="#"></a>-->
-
-													<!--</div>-->
-												<!--</div>-->
-											<!--</div>-->
-										<!--</li>-->
-										<!--<li class="zoom">-->
-											<!--<div class="box clearfix">-->
-												<!--<figure class="img-box fade-effect">-->
-													<!--<a href="#"><img src="assets/img/tm-7.jpg" alt="" /></a>-->
-												<!--</figure>-->
-												<!--<div class="detail-box animate-effect">-->
-													<!--<span class="name"><a href="#">GEORGE QUICK</a></span>-->
-													<!--<span class="designation">CEO and Board Member <i></i></span>-->
-													<!--<p>-->
-														<!--Lorem ipsum dolor sit amet, consectetur adipiscing elitInteger ornare odio .-->
-													<!--</p>-->
-													<!--<div class="social-list clearfix">-->
-
-														<!--<a class="fa fa-facebook" href="#"></a>-->
-
-														<!--<a class="fa fa-twitter" href="#"></a>-->
-
-														<!--<a class="fa fa-google-plus" href="#"></a>-->
-
-													<!--</div>-->
-												<!--</div>-->
-											<!--</div>-->
-										<!--</li>-->
-									<!--</ul>-->
-								<!--</div>-->
-							<!--</div>-->
-						<!--</div>-->
-					<!--</div>-->
-				<!--</div>-->
-
-			<!--</div>-->
+			</div>
 			<!--content Section End Here -->
 
 			<!--footer Section Start Here -->
@@ -459,23 +264,23 @@
 							</div>
 
 							<div class="col-xs-12 col-sm-4">
-								<h3>navigation <i></i></h3>
+								<h3>Навигация по сайту <i></i></h3>
 								<ul class="list clearfix">
 									<li>
-										<a href="#">Главная</a>
+										<a href="{% url 'home:home' %}">Главная</a>
 									</li>
 									<li>
-										<a href="#">О нас</a>
+										<a href="{% url 'home:about' %}">О нас</a>
 									</li>
 									<li>
-										<a href="#">Гидроизол</a>
+										<a href="{% url 'home:articles' %}">Гидроизол</a>
 									</li>
 									<li>
-										<a href="#">Услуги</a>
+										<a href="{% url 'home:contact' %}">Контакты</a>
 									</li>
-									<li>
-										<a href="#">Статьи</a>
-									</li>
+									<!--<li>-->
+										<!--<a href="#">Статьи</a>-->
+									<!--</li>-->
 									<!--Возможная ссылка-->
 									<!--<li>-->
 										<!--<a href="#">Contact us</a>-->
@@ -507,15 +312,31 @@
 
 						<div class="row animate-effect">
 							<div class="col-xs-12 copyright">
-								<span>Industrial Theme | © 2015 Industrial, All rights reserved</span>
+								<div class="col-sm-5 left-header">
+									<span>Ly4ok666 | © 2017 Ly4ok_Industrial, All rights reserved</span>
+								</div>
+								<div class="col-sm-7 right-header">
+								<ul>
+									<li>
+										<a href="mailto:ly4ok666@gmail.com"><i class="fa fa-envelope-o"></i> ly4ok666@gmail.com</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-vk"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-instagram"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-facebook"></i></a>
+									</li>
+								</ul>
 							</div>
 						</div>
-
+					</div>
 					</div>
 				</div>
 			</footer>
 			<!--footer Section End Here -->
-
 		</div>
 		<!--Wrapper Section End Here -->
 

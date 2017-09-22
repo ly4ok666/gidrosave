@@ -1,48 +1,54 @@
 {% extends 'contact.html' %}
 {% load staticfiles %}
 
-{% block contactform %}
- <div class="panel panel-success">
-  <div class="panel-heading">
-    <h2 class="panel-title">Обратная связь</h2>
-  </div>
-  <div class="panel-body">
-<div class="well well-lg">
-    <h3></h3>
-<form action="{% url 'home:contacts' %}" method="post">
-    {% csrf_token %}
-{#    {% bootstrap_form form %}#}
-    {{ form.non_field_errors }}
-	<div>
-	  <label for="id_subject">Тема:</label>
-	  {{ form.subject.errors }}
-{#	  {{ form.subject }}#}
-      <input class="form-control" id="id_subject" name="subject" placeholder="Тема">
-	</div>
-    &nbsp;
-	<div>
-	  <label for="id_sender">E-mail:</label>
-	  {{ form.sender.errors }}
-{#	  {{ form.sender }}#}
-      <input class="form-control" id="id_sender" name="sender" placeholder="Ваш e-mail">
-	</div>
-    &nbsp;
-	<div>
-	  <label for="id_message">Сообщение:</label>
-	  {{ form.message.errors }}
-{#	  {{ form.message }}#}
-      <textarea class="form-control" id="id_message" name="message" placeholder="Введите ваше сообщение"></textarea>
-	</div>
-    &nbsp;
-	<div>
-	  {{ form.copy.errors }}
-	  <label for="id_copy">{{ form.copy }} Отправить копию себе </label>
-	</div>
-    <br>
-	<input type="submit" class="btn btn-success" value="Отправить сообщение"/>
-</form>
-  </div>
-</div>
-</div>
 
+{% block contactform %}
+<div class="left-detail clearfix">
+    <strong>Выможете связаться с нами по предложенному телефону или оставить нам сообщение с интересующим вас вопросом и мы обязательно с вами свяжемся</strong>
+    <form role="form" action="" method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <fieldset>
+            <!--{{ form.contact_name.errors }}-->
+            <label for="id_contact_name"></label>
+            <!--{{ form.contact_name }}-->
+            <input type="text" name="contact_name" placeholder="NAME" required id="id_contact_name">
+
+            <span class="coll-1">
+                <!--{{ form.contact_email.errors }}-->
+                <label for="id_contact_email"></label>
+                <!--{{ form.contact_email }}-->
+                <input type="text" name="contact_email" placeholder="Введите ваш email" required id="id_contact_email">
+            </span>
+
+            <!--<span class="coll-1 last">-->
+                <!--<input type="text" placeholder="SUBJECT" id="sub">-->
+            <!--</span>-->
+
+            <div class="box clearfix">
+                <!--{{ form.form_content.errors }}-->
+                <label for="id_content"></label>
+                <!--{{ form.form_content }}-->
+                <textarea name="content" placeholder="Введите ваше сообщение" required id="id_content"></textarea>
+                <!--<input type="button" value="POST MESSAGE" id="submit">-->
+                <button type="submit" style="
+                                 float: right;
+                                 border: none;
+                                 width: 184px;
+                                 height: 53px;
+                                 background: #f38929;
+                                 letter-spacing: 1px;
+                                 font-size: 15px;
+                                 line-height: 21px;
+                                 color: #fff;
+                                 font-weight: 700;
+                                 padding: 16px 10px;
+                                 text-align: center;
+                                 margin-top: 10px;
+                ">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+
+</div>
 {% endblock %}

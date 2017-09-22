@@ -128,7 +128,7 @@
 											<!--</ul>-->
 										<!--</li>-->
 										<li>
-											<a href="#">Контакты</a>
+											<a href="{% url 'home:contact' %}">Контакты</a>
 											<!--Возможное подменю-->
 											<!--<ul class="submenu">-->
 												<!--<li>-->
@@ -149,7 +149,7 @@
 										</li>
 									</ul>
 								</nav>
-								<a href="#" class="quote">Задать вопрос</a>
+								<a href="{% url 'home:contact' %}" class="quote">Задать вопрос</a>
 							</div>
 
 						</div>
@@ -455,16 +455,16 @@
 								<h3>Навигация по сайту <i></i></h3>
 								<ul class="list clearfix">
 									<li>
-										<a href="#">Главная</a>
+										<a href="{% url 'home:home' %}">Главная</a>
 									</li>
 									<li>
-										<a href="#">О нас</a>
+										<a href="{% url 'home:about' %}">О нас</a>
 									</li>
 									<li>
-										<a href="#">Гидроизол</a>
+										<a href="{% url 'home:articles' %}">Гидроизол</a>
 									</li>
 									<li>
-										<a href="#">Контакты</a>
+										<a href="{% url 'home:contact' %}">Контакты</a>
 									</li>
 									<!--<li>-->
 										<!--<a href="#">Статьи</a>-->
@@ -500,10 +500,30 @@
 
 						<div class="row animate-effect">
 							<div class="col-xs-12 copyright">
-								<span>Industrial Theme | © 2015 Industrial, All rights reserved</span>
-							</div>
+								<div class="col-sm-5 left-header">
+									<span>Ly4ok666 | © 2017 Ly4ok_Industrial, All rights reserved</span>
+								</div>
+								<div class="col-sm-7 right-header">
+								<ul>
+									<li>
+										<a href="mailto:ly4ok666@gmail.com"><i class="fa fa-envelope-o"></i> ly4ok666@gmail.com</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-vk"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-instagram"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-facebook"></i></a>
+									</li>
+								</ul>
+							<!--</div>-->
+								<!--<span>Ly4ok666 | © 2017 Ly4ok_Industrial, All rights reserved</span>-->
+							<!--</div>-->
 						</div>
-
+					</div>
+				</div>
 					</div>
 				</div>
 			</footer>

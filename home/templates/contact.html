@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles %}
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -111,7 +111,7 @@
 											<!--</ul>-->
 										<!--</li>-->
 										<li>
-											<a href="#">Контакты</a>
+											<a href="{% url 'home:contact' %}">Контакты</a>
 											<!--Возможное подменю-->
 											<!--<ul class="submenu">-->
 												<!--<li>-->
@@ -132,7 +132,7 @@
 										</li>
 									</ul>
 								</nav>
-								<a href="#" class="quote">Задать вопрос</a>
+								<a href="{% url 'home:contact' %}" class="quote">Задать вопрос</a>
 							</div>
 
 						</div>
@@ -178,60 +178,37 @@
 										<strong>Thanks</strong> for using our template. Your message has been sent.
 									</div>
 								</div>
-								<h3>GET IN TOUCH <i></i></h3>
+								<h3>Связаться с нами <i></i></h3>
 									{% block contactform %}{% endblock %}
-								<!--<div class="left-detail clearfix">-->
-									<!--<strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy-->
-									<!--nibh euismod tincidunt ut laoreet dolore magna aliquam </strong>-->
-									<!--<form action="" name="form-1">-->
-										<!--<fieldset>-->
-											<!--<input type="text" placeholder="NAME" id="name">-->
 
-											<!--<span class="coll-1">-->
-												<!--<input type="text" placeholder="EMAIL" id="email">-->
-											<!--</span>-->
-
-											<!--<span class="coll-1 last">-->
-												<!--<input type="text" placeholder="SUBJECT" id="sub">-->
-											<!--</span>-->
-
-											<!--<div class="box clearfix">-->
-												<!--<textarea placeholder="MESSAGE" id="message" > </textarea>-->
-												<!--<input type="button" value="POST MESSAGE" id="submit">-->
-											<!--</div>-->
-										<!--</fieldset>-->
-									<!--</form>-->
-
-								<!--</div>-->
 
 								<div class="right-detail">
-									<div class="social-icons">
-										<a href="#" class="fa fa-facebook"></a>
-										<a href="#" class="fa fa-twitter"></a>
-										<a href="#" class="fa fa-google-plus"></a>
-									</div>
+
 									<address>
-										<strong>LONDON OFFICE</strong>
+										<strong>Адресс в Москве:</strong>
 										<ul>
+											<a href="#"><i class="fa fa-vk" style="padding-left: 50px;"></i></a>
+											<a href="#"><i class="fa fa-instagram" style="padding-right: 20px; padding-left: 20px; padding-bottom: 25px;"></i></a>
+											<a href="#"><i class="fa fa-facebook"></i></a>
 											<li>
 												<i class="location-svg"><img src="assets/svg/05.svg" alt="" class="svg"/></i>
-												<span>227 Marion Street</span>
-												<span>Columbia, SC 29201</span>
+												<span>ул.Мусы Джалиля</span>
+												<span>д.4, к.4,оффис №349</span>
 											</li>
 
 											<li>
 												<i class="fa fa-phone"></i>
-												<span>1-888-123-4567</span>
+												<span>8-915-346-11-32</span>
 											</li>
 
 											<li>
-												<i class="fa fa-print"></i>
-												<span>1-888-123-4568</span>
+												<i class="fa fa-phone"></i>
+												<span>8-499-725-32-93</span>
 											</li>
 
 											<li>
 												<i class="fa fa-envelope-o"></i>
-												<span><a href="mailto:info@industrail.com">info@industrail.com</a></span>
+												<span><a href="mailto:ly4ok666@gmail.com">ly4ok666@gmail.com</a></span>
 											</li>
 										</ul>
 									</address>
@@ -257,105 +234,132 @@
 			<!--footer Section Start Here -->
 			<footer id="footer">
 
-				<!--contact-us-container Start Here -->
+
 				<div class="contact-us-container">
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-12 animate-effect">
 								<div class="box">
-									<em class="location-svg"><img src="assets/svg/05.svg" alt="" class="svg"/></em>
-									<strong>227 Marion Street</strong>
-									<span>Columbia, SC 29201</span>
+									<!--<em class="location-svg"><img src="{% static 'svg/05.svg' %}" alt="" class="svg"/></em>-->
+									<!--<strong>227 Marion Street</strong>-->
+									<!--<span>Columbia, SC 29201</span>-->
 								</div>
 
 								<div class="box call">
-									<em class="fa fa-phone"></em>
-									<strong>1-888-123-4567</strong>
-									<span><a href="mailto:info@industrial.com">info@industrial.com</a></span>
+									<!--<em class="fa fa-phone"></em>-->
+									<!--<strong>1-888-123-4567</strong>-->
+									<!--<span><a href="mailto:info@industrial.com">info@industrial.com</a></span>-->
 								</div>
 
-								<div class="box last">
+								<div class="box" style="height: 128px">
 									<ul class="clearfix">
-										<li>
-											<a href="#"><i class="fa fa-facebook"></i></a>
-										</li>
-										<li>
-											<a href="#"><i class="fa fa-twitter"></i></a>
-										</li>
-										<li>
-											<a href="#"><i class="fa fa-google-plus"></i></a>
-										</li>
+										<!--<li>-->
+											<!--<a href="#"><i class="fa fa-facebook"></i></a>-->
+										<!--</li>-->
+										<!--<li>-->
+											<!--<a href="#"><i class="fa fa-twitter"></i></a>-->
+										<!--</li>-->
+										<!--<li>-->
+											<!--<a href="#"><i class="fa fa-google-plus"></i></a>-->
+										<!--</li>-->
 									</ul>
 								</div>
 
-								<div class="box last">
-									<a href="#" class="contact-us">CONTACT US</a>
+								<div class="box call">
+										<!--<em class="fa fa-envelope-o"></em>-->
+										<!--<span><a href="mailto:info@industrail.com">info@industrail.com</a></span>-->
+									<!--<a class="contact-us" href="#">CONTACT US</a>-->
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!--contact-us-container End Here -->
+				<!--contact-us container End Here -->
 
 				<div class="primary-footer">
 					<div class="container">
 						<div class="row animate-effect">
 							<div class="col-xs-12 col-sm-4">
-								<h3>about us <i></i></h3>
+								<h3>О Компании <i></i></h3>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur  some dymmy
-									adipiscing elit. Nam turpis quam, sodales in text she
-									ante sagittis, varius efficitur mauris. Nam turpis quam,
-									sodales in text should be able. to...
+									Профиль ООО "ГидроПротект" - качественная гидроизоляция зданий. Наша история началась еще в 1994 году. Уже тогда специалисты нашей фирмы начали заниматься проблемами комплекса мероприятий по качественной профессиональной защите строительных конструкций от проникновения влаги.
 								</p>
 
 							</div>
 
 							<div class="col-xs-12 col-sm-4">
-								<h3>navigation <i></i></h3>
+								<h3>Навигация по сайту <i></i></h3>
 								<ul class="list clearfix">
 									<li>
-										<a href="#">Home</a>
+										<a href="{% url 'home:home' %}">Главная</a>
 									</li>
 									<li>
-										<a href="#">About us</a>
+										<a href="{% url 'home:about' %}">О нас</a>
 									</li>
 									<li>
-										<a href="#">Projects</a>
+										<a href="{% url 'home:articles' %}">Гидроизол</a>
 									</li>
 									<li>
-										<a href="#">Blog</a>
+										<a href="{% url 'home:contact' %}">Контакты</a>
 									</li>
-									<li>
-										<a href="#">What we do</a>
-									</li>
-									<li>
-										<a href="#">Contact us</a>
-									</li>
+									<!--<li>-->
+										<!--<a href="#">Статьи</a>-->
+									<!--</li>-->
+									<!--Возможная ссылка-->
+									<!--<li>-->
+										<!--<a href="#">Contact us</a>-->
+									<!--</li>-->
 								</ul>
 							</div>
 
 							<div class="col-xs-12 col-sm-4">
-								<h3>newsletter signup <i></i></h3>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur  some dymmy
-									adipiscing elit. Nam turpis quam.
-								</p>
-								<div class="input-field">
-									<input type="text" value="enter email address" class="signup" onfocus="if(this.value=='enter email address')this.value=''" onblur="if(this.value=='')this.value='enter email address'"  />
-									<button class="subimt">
-										<i class="fa fa-angle-right">&nbsp;</i>
-									</button>
-								</div>
+								<h3>Наши контакты: <i></i></h3>
+										<a href="#"><i class="fa fa-vk"></i></a>
+										<a href="#"><i class="fa fa-instagram" style="padding-right: 20px; padding-left: 20px; padding-bottom: 10px;"></i></a>
+										<a href="#"><i class="fa fa-facebook"></i></a>
+								<address>
+								Адресс в Москве:<br>
+								ул.Мусы Джалиля,<br>
+								д.4, к.4,<br>
+									оффис №349<br>
+								<i class="fa fa-phone"></i>
+									8-915-346-11-32<br>
+									<i class="fa fa-phone"></i>
+									8-499-725-32-93<br>
+								<i class="fa fa-envelope-o"></i>
+									<a href="mailto:ly4ok666@gmail.com">ly4ok666@gmail.com</a>
+
+								</address>
 							</div>
 
 						</div>
+
 						<div class="row animate-effect">
 							<div class="col-xs-12 copyright">
-								<span>Industrial Theme | © 2015 Industrial, All rights reserved</span>
-							</div>
+								<div class="col-sm-5 left-header">
+									<span>Ly4ok666 | © 2017 Ly4ok_Industrial, All rights reserved</span>
+								</div>
+								<div class="col-sm-7 right-header">
+								<ul>
+									<li>
+										<a href="mailto:ly4ok666@gmail.com"><i class="fa fa-envelope-o"></i> ly4ok666@gmail.com</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-vk"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-instagram"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-facebook"></i></a>
+									</li>
+								</ul>
+							<!--</div>-->
+								<!--<span>Ly4ok666 | © 2017 Ly4ok_Industrial, All rights reserved</span>-->
+							<!--</div>-->
 						</div>
-
+					</div>
+				</div>
 					</div>
 				</div>
 			</footer>

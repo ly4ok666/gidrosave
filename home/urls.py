@@ -3,7 +3,7 @@ from home.views import home
 from home.views import about
 from home.views import content
 from home.views import article
-from home.views import contacts
+from home.views import contact
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
 from django.conf import settings
@@ -22,7 +22,7 @@ urlpatterns = [
     # #Статьи по страницам
     #url(r'^articles/page/(\d+)/$', articles),
     #Страница с контактами
-    url(r'^contacts/$', contacts, name='contacts'),
+    url(r'^contact/$', contact, name='contact'),
 
 
 

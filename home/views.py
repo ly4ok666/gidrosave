@@ -14,7 +14,6 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # from start.models import StartContent
 # from end.models import EndContent
 
-# Create your views here.
 
 def home(request):
     """Домашняя страница нашего проекта"""
@@ -51,33 +50,36 @@ def article(request, article_id=1):
                                                'features': Features.objects.filter(features_article_id=article_id),
                                                })
 
-# Функция формы обратной связи
-def contacts(reguest):
-    if reguest.method == 'POST':
-        form = ContactForm(reguest.POST)
-        # Если форма заполнена корректно, сохраняем все введённые пользователем значения
+    # new imports that go at the top of the file
+from django.core.mail import EmailMessage
+from django.shortcuts import redirect
+from django.template import Context
+from django.template.loader import get_template
+
+    # our view
+def contact(request):
+    form_class = ContactForm
+         # new logic!
+    if request.method == 'POST':
+        form = form_class(data=request.POST)
         if form.is_valid():
-            subject = form.cleaned_data['subject']
-            sender = form.cleaned_data['sender']
-            message = form.cleaned_data['message']
-            copy = form.cleaned_data['copy']
-
-            recepients = ['sender']
-            # Если пользователь захотел получить копию себе, добавляем его в список получателей
-            if copy:
-                recepients.append(sender)
-            try:
-                send_mail(subject, message, '', recepients)
-            except BadHeaderError: #Защита от уязвимости
-                return HttpResponse('Invalid header found')
-            # Переходим на другую страницу, если сообщение отправлено
-            return HttpResponseRedirect('/contacts/thanks/')
-
-    else:
-        form = ContactForm()
-    # Выводим форму в шаблон
-    return render(reguest, 'contacts/contacts.html', {'form': form})
-
-def thanks(reguest):
-    thanks = 'thanks'
-    return render(reguest, 'thanks.html', {'thanks': thanks})
+            contact_name = request.POST.get('contact_name', '')
+            contact_email = request.POST.get('contact_email', '')
+            form_content = request.POST.get('content', '')
+                # Email the profile with the
+                # contact information
+            template = get_template('contact_template.txt')
+            context = {'contact_name': contact_name, 'contact_email': contact_email, 'form_content': form_content}
+            content = template.render(context)
+            email = EmailMessage("New contact form submission", content, "Your website" + '', ['ly4ok666@gmail.com'], headers={'Reply-To': contact_email})
+            email.send()
+        # return render('contact')
+        # Переходим на другую страницу, если сообщение отправлено
+#         return HttpResponseRedirect('/contacts/thanks/')
+    return render(request, 'contacts/contacts.html', {
+        'form': form_class,
+    })
+#
+# def thanks(reguest):
+#     thanks = 'thanks'
+#     return render(reguest, 'thanks.html', {'thanks': thanks})
