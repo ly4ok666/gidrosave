@@ -99,8 +99,8 @@
       <file leaf-file-name="global.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home/static/css/global.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="174" column="4" lean-forward="false" selection-start-line="174" selection-start-column="6" selection-end-line="174" selection-end-column="39" />
+            <state relative-caret-position="301">
+              <caret line="177" column="12" lean-forward="true" selection-start-line="177" selection-start-column="12" selection-end-line="177" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -716,8 +716,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home/static/css/global.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="174" column="4" lean-forward="false" selection-start-line="174" selection-start-column="6" selection-end-line="174" selection-end-column="39" />
+        <state relative-caret-position="301">
+          <caret line="177" column="12" lean-forward="true" selection-start-line="177" selection-start-column="12" selection-end-line="177" selection-end-column="12" />
           <folding />
         </state>
       </provider>

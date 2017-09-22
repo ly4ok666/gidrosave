@@ -168,7 +168,7 @@ input:focus, textarea:focus, button:focus {
 
 /*======Global Transition Effect==========*/
 input:focus, textarea:focus, .btn:focus, .zoom img, .img-thumb img, .btn, .btn:hover, .header .header-search-box, #footer .admin, .header li a, #footer .social-icons a, #footer .email a, #footer h4 a:hover, .team-info h3 a, .news-info h3 a, #header *, .team-info .social-icons a:hover, .team-info .social-icons a, .org-info .service-block:hover h3 i, .org-info .service-block h3 i, a:hover, .contact-us-container .box li a i, .leavecomment-box input[type=button], .faq-detail li .qus, .other-project li .over {
-	-webkit-transition: all 0.2s ease-in-out;
+	/*-webkit-transition: all 0.2s ease-in-out;*/
 	-moz-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
