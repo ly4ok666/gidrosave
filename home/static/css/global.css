@@ -172,7 +172,7 @@ input:focus, textarea:focus, .btn:focus, .zoom img, .img-thumb img, .btn, .btn:h
 	-moz-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
+	/*transition: all 0.2s ease-in-out;*/
 }
 
 .img-thumb {
