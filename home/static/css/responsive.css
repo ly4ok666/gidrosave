@@ -1194,7 +1194,7 @@
 	}
 	.about-img {
 		float: none;
-		padding-left: 0;
+		padding-left: 8px;
 	}
 	.about-img img {
 		margin-left: 0;

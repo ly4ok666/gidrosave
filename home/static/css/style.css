@@ -1983,7 +1983,7 @@
 
 .about-img {
 	float: right;
-	margin-top: 48px;
+	margin-top: 30px;
 	padding-left: 60px;
 	overflow: hidden;
 }
@@ -2295,6 +2295,16 @@
 	overflow: hidden;
 }
 .our-team-container .our-team-detail li .box .detail-box {
+	width: 220px;
+    margin: 0 0 1em 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    font-size: 16px;
+    line-height: 27px;
+    color: 636364;
+    margin-bottom: 0;
 	float: left;
 	width: 50%;
 	padding: 0px 38px 0;
@@ -2334,7 +2344,7 @@
   	margin: 0 0 1em 0;
 	overflow: hidden;
 	display: -webkit-box;
-  	-webkit-line-clamp: 7;
+  	-webkit-line-clamp: 5;
   	-webkit-box-orient: vertical;
 	font-size: 16px;
 	line-height: 27px;
@@ -2351,7 +2361,7 @@
 	font-size: 15px;
 	line-height: 24px;
 	color: #f79420;
-	margin: 0 25px 0 0
+	margin: 16px 25px 0 36px;
 }
 .our-team-container .our-team-detail li .box .social-list a:hover {
 	color: #f38929

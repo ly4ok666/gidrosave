@@ -47,12 +47,14 @@ def content(request,article_id=1):
 
 def article(request, article_id=1):
     """Вывод одной конкретной статьи """
+    # краткое о нас
+    abouts = About.objects.all()
     # articles = Article.objects.get(id=article_id)
     # features = Features.objects.filter(features_article_id=article_id)
     # return render(request, 'home/article.html', locals())
     return render_to_response('home/articles.html', {'article': Article.objects.get(id=article_id),
                                                'features': Features.objects.filter(features_article_id=article_id),
-                                               })
+                                               'abouts': abouts})
 
     # new imports that go at the top of the file
 from django.core.mail import EmailMessage

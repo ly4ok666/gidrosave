@@ -30,4 +30,15 @@ class Home(models.Model):
         verbose_name_plural = 'статьи'
         ordering = ['-home_date']
 
+# class Header(models.Model):
+#    class Meta():
+#        db_table = 'features'
+#        verbose_name = 'статьи'
+#
+#    header_img
+#    features_text = models.TextField()
+#
+#    features_article = models.ForeignKey(Home)
+
+
 

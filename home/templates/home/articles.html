@@ -8,7 +8,7 @@
 
 							<div class="col-xs-12 col-sm-7 animate-effect  ">
 								<h4>{{ article.article_title }}<i></i></h4>
-								<span class="note">our experts deliver innovative, efficient &amp; value-driven solutions for customers in energy.</span>
+								<!--<span class="note">our experts deliver innovative, efficient &amp; value-driven solutions for customers in energy.</span>-->
 								<p>{% autoescape off %}{{ article.article_text }}{% endautoescape %}</p>
 								<div class="clearfix">
 									<div class="box">
@@ -67,9 +67,9 @@
 
 									<ul class="pro-slider fade-effect">
 										<li>
-											<a href="projects-details.html"><img src="assets/img/profile-img-7.jpg" alt="" /></a>
+											<a href="projects-details.html"><img src="{% static 'img/profile-img-7.jpg' %}" alt="" /></a>
 										</li>
-										<li><a href="projects-details.html"><img src="assets/img/profile-img-8.jpg" alt="" /></a>
+										<li><a href="projects-details.html"><img src="{% static 'img/profile-img-8.jpg' %}" alt="" /></a>
 										</li>
 									</ul>
 

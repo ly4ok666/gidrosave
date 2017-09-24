@@ -24,6 +24,25 @@
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+			$(window).scroll(function(){
+			    if ($(this).scrollTop() > 100) {
+			$('.scrollup').fadeIn();
+				} else {
+			$('.scrollup').fadeOut();
+				}
+			});
+
+			$('.scrollup').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+				});
+
+			});
+		</script>
 	</head>
 	<body>
 		<!--Wrapper Section Start Here -->
@@ -202,9 +221,9 @@
 										<figure class="fade-effect"><img src="{% static 'svg/svg1.svg' %}" class="svg" alt="" />
 										</figure>
 										<div class="animate-effect">
-										<strong>we are passionate</strong>
+										<strong>РАБОТАЕМ ДО НУЖНОГО РЕЗУЛЬТАТА</strong>
 										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec erat erat. Integer blandit, nullahendrerit,
+											<!--БЕСПЛАТНЫЙ ВЫЕЗД СПЕЦИАЛИСТА-->
 										</p>
 										</div>
 									</li>
@@ -212,9 +231,9 @@
 										<figure class="fade-effect"><img src="{% static 'svg/clock.svg' %}" class="svg" alt="" />
 										</figure>
 										<div class="animate-effect">
-										<strong>honest &amp; dependable</strong>
+										<strong>ПРИСТУПАЕМ К РАБОТЕ ОПЕРАТИВНО</strong>
 										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec erat erat. Integer blandit, nullahendrerit,
+											<!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec erat erat. Integer blandit, nullahendrerit,-->
 										</p>
 										</div>
 									</li>
@@ -222,9 +241,9 @@
 										<figure class="fade-effect"><img src="{% static 'svg/car.svg' %}" class="svg" alt="" />
 										</figure>
 										<div class="animate-effect">
-										<strong>always improving</strong>
+										<strong>БЕСПЛАТНЫЙ ВЫЕЗД СПЕЦИАЛИСТА</strong>
 										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec erat erat. Integer blandit, nullahendrerit,
+											<!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec erat erat. Integer blandit, nullahendrerit,-->
 										</p>
 										</div>
 										
@@ -233,9 +252,9 @@
 										<figure class="fade-effect"><img src="{% static 'svg/hands.svg' %}" class="svg" alt="" />
 										</figure>
 										<div class="animate-effect">
-										<strong>hard working</strong>
+										<strong>НАС РЕКОМЕНДУЮТ</strong>
 										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec erat erat. Integer blandit, nullahendrerit,
+											<!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec erat erat. Integer blandit, nullahendrerit,-->
 										</p>
 										</div>
 									</li>
@@ -259,9 +278,9 @@
 									<ul class="slides">
 										<li>
 											<h2>{{ context.home_title }} <i></i></h2>
-											<strong>WE OFFER AN ALL ROUND CONDO REMODELLING SERVICES</strong>
+											<!--<strong>WE OFFER AN ALL ROUND CONDO REMODELLING SERVICES</strong>-->
 											<p>{% autoescape off %}{{ context.home_text }}{% endautoescape %}</p>
-											<a href="#" class="quote">GET A QUOTE</a>
+											<!--<a href="#" class="quote">Есть вопрос?</a>-->
 										</li>
 											<!--Текст на каждую кнопку слайдера-->
 										<!--<li>-->
@@ -694,6 +713,6 @@
 		<script src="{% static 'js/jquery.bxslider.js' %}"></script>
 		<script defer src="{% static 'js/jquery.flexslider.js' %}"></script>
 		<script src="{% static 'js/site.js' %}"></script>
-
+		<a href="#" class="scrollup">Наверх</a>
 	</body>
 </html>
