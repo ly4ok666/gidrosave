@@ -276,11 +276,11 @@
 				<div class="primary-footer">
 					<div class="container">
 						<div class="row animate-effect">
-							{% for about in context %}
+							{% for about in abouts %}
 							<div class="col-xs-12 col-sm-4">
 								<h3>О Компании <i></i></h3>
 								<p>
-									{% autoescape off %}{{ about.about_text }}{% endautoescape %}
+									{{ about.short_text }}
 								</p>
 							</div>
 							{% endfor %}

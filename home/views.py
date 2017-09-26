@@ -7,7 +7,7 @@ from django.core.mail import send_mail, BadHeaderError
 # #from django.template import Context
 from django.shortcuts import render_to_response
 from home.models import Home
-from about.models import About
+from about.models import About, ShortAbout
 from content.models import Article, Features
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # from about_card.models import Card
@@ -15,23 +15,25 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # from end.models import EndContent
 
 
-def home(request):
+def home(request,article_id=1):
     """Домашняя страница нашего проекта"""
     contexts = Home.objects.all()
     # краткое о нас
-    context = About.objects.all()
-    return render(request, 'index.html', locals())
+    abouts = ShortAbout.objects.filter(short_article_id=article_id)
+    return render(request, 'index.html',locals())
 
-def about(request):
+def about(request,article_id=1):
     """Страница о компании"""
     context = About.objects.all()
+    # краткое о нас
+    abouts = ShortAbout.objects.filter(short_article_id=article_id)
     return render(request, 'about.html', locals())
 
 def content(request,article_id=1):
     # article = {'article': Article.objects.get(id=article_id)}
     #Вывод всех статей и пагинация (2 статьи на страницу)"""
     # краткое о нас
-    abouts = About.objects.all()
+    abouts = ShortAbout.objects.filter(short_article_id=article_id)
     all_Articles = Article.objects.all()
     paginator = Paginator(all_Articles, 4)
     page = request.GET.get('page')
@@ -48,7 +50,7 @@ def content(request,article_id=1):
 def article(request, article_id=1):
     """Вывод одной конкретной статьи """
     # краткое о нас
-    abouts = About.objects.all()
+    abouts = ShortAbout.objects.filter(short_article_id=article_id)
     # articles = Article.objects.get(id=article_id)
     # features = Features.objects.filter(features_article_id=article_id)
     # return render(request, 'home/article.html', locals())
@@ -63,8 +65,8 @@ from django.template import Context
 from django.template.loader import get_template
 
     # our view
-def contact(request):
-    abouts = About.objects.all()
+def contact(request,article_id=1):
+    abouts = ShortAbout.objects.filter(short_article_id=article_id)
     form_class = ContactForm
          # new logic!
     if request.method == 'POST':

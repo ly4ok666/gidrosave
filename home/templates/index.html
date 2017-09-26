@@ -188,11 +188,11 @@
 								<!--&lt;!&ndash;</div>&ndash;&gt;-->
 
 							<!--</div>-->
-							{% for about in context %}
+							{% for about in abouts %}
 							<div class="bottom-sec">
 								<h2>О компании</h2>
 								<p>
-									{% autoescape off %}{{ about.about_text }}{% endautoescape %}
+									{{ about.short_text }}
 								</p>
 								<a href="{% url 'home:about' %}">Подробнее</a>
 							</div>
@@ -617,11 +617,11 @@
 				<div class="primary-footer">
 					<div class="container">
 						<div class="row animate-effect">
-							{% for about in context %}
+							{% for about in abouts %}
 							<div class="col-xs-12 col-sm-4">
 								<h3>О Компании <i></i></h3>
 								<p>
-									{% autoescape off %}{{ about.about_text }}{% endautoescape %}
+									{{ about.short_text }}
 								</p>
 							</div>
 							{% endfor %}

@@ -27,3 +27,11 @@ class About(models.Model):
 
     bit.short_descriptio = u'Изображение'
     bit.allow_tags = True
+
+
+class ShortAbout(models.Model):
+   class Meta():
+       db_table = 'shortabout'
+
+   short_text = models.TextField(verbose_name=u'Краткое описание')
+   short_article = models.ForeignKey(About)

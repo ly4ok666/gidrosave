@@ -302,7 +302,7 @@
 								{% for about in abouts %}
 								<h3>О Компании <i></i></h3>
 								<p>
-									{% autoescape off %}{{ about.about_text }}{% endautoescape %}
+									{{ about.short_text }}
 								</p>
 								{% endfor %}
 							</div>
