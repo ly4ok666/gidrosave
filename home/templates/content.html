@@ -74,7 +74,7 @@
 							<div class="col-sm-7 right-header">
 								<ul>
 									<li>
-										<a href="mailto:ly4ok666@gmail.com"><i class="fa fa-envelope-o"></i> ly4ok666@gmail.com</a>
+										<a href="mailto:gidrosave@gmail.com"><i class="fa fa-envelope-o"></i> gidrosave@gmail.com</a>
 									</li>
 									<li>
 										<a href="#"><i class="fa fa-vk"></i></a>
@@ -129,7 +129,7 @@
 											<!--</ul>-->
 										</li>
 										<li class="active">
-											<a href="{% url 'home:articles' %}">Гидросейв</a>
+											<a href="{% url 'home:articles' %}">Наши работы</a>
 										</li>
 										<!--<li>-->
 											<!--<a href="#">Контакты</a>-->
@@ -147,24 +147,10 @@
 											<!--</ul>-->
 										<!--</li>-->
 										<li>
+											<a href="{% url 'home:blog' %}">Статьи</a>
+										</li>
+										<li>
 											<a href="{% url 'home:contact' %}">Контакты</a>
-											<!--Возможное подменю-->
-											<!--<ul class="submenu">-->
-												<!--<li>-->
-													<!--<a href="blog-1.html">blog-1</a>-->
-												<!--</li>-->
-												<!--<li>-->
-													<!--<a href="blog-2.html">blog-2</a>-->
-												<!--</li>-->
-												<!--<li>-->
-													<!--<a href="blog-post.html">blog-post</a>-->
-												<!--</li>-->
-											<!--</ul>-->
-										<!--Возможная ссылка, перенести под </li>-->
-										<!--<li>-->
-											<!--<a href="contact.html">contact</a>-->
-										<!--</li>-->
-									<!--</ul>-->
 										</li>
 									</ul>
 								</nav>
@@ -186,7 +172,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-12">
-								<h3>ГИДРОСЕЙВ</h3>
+								<h3>НАШИ РАБОТЫ</h3>
 							</div>
 						</div>
 					</div>
@@ -202,7 +188,7 @@
 											<a href="{% url 'home:home' %}">Главная</a>
 										</li>
 										<li>
-											Гидросейв
+											Наши Работы
 										</li>
 									</ul>
 								</div>
@@ -323,7 +309,7 @@
 											<div class="box clearfix">
 												{% if article.article_image %}
 												<figure class="img-box fade-effect">
-													<a href="{{ MEDIA_URL }}{{ article.article_image.url }}"><img src="{{ MEDIA_URL }}{{ article.article_image.url }}" alt="" /></a>
+													<a href="{{ MEDIA_URL }}{{ article.article_image.url }}"><img src="{{ MEDIA_URL }}{{ article.article_image.url }}" alt="тест" /></a>
 												{% endif %}
 										<!--<div class="about-img" style="width: 366px; height: 320px;">-->
 											<!--<img src="{{ MEDIA_URL }}{{ about.about_image.url }}" alt="" class="rightimg" />-->
@@ -491,11 +477,11 @@
 										<a href="{% url 'home:articles' %}">Гидроизол</a>
 									</li>
 									<li>
+										<a href="{% url 'home:blog' %}">Статьи</a>
+									</li>
+									<li>
 										<a href="{% url 'home:contact' %}">Контакты</a>
 									</li>
-									<!--<li>-->
-										<!--<a href="#">Статьи</a>-->
-									<!--</li>-->
 									<!--Возможная ссылка-->
 									<!--<li>-->
 										<!--<a href="#">Contact us</a>-->

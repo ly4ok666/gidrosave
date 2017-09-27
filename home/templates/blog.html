@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles %}
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -45,6 +45,7 @@
 	<body>
 		<!--Wrapper Section Start Here -->
 		<div id="wrapper">
+
 			<div id="pageloader" class="row m0">
 				<div class="loader-item"><img src="assets/svg/grid.svg" alt="loading"></div>
 			</div>
@@ -131,10 +132,10 @@
 												<!--</li>-->
 											<!--</ul>-->
 										<!--</li>-->
-										<li>
+										<li class="active">
 											<a href="{% url 'home:blog' %}">Статьи</a>
 										</li>
-										<li class="active">
+										<li>
 											<a href="{% url 'home:contact' %}">Контакты</a>
 										</li>
 									</ul>
@@ -156,7 +157,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-12">
-								<h3>Наши Контакты</h3>
+								<h3>Статьи</h3>
 							</div>
 						</div>
 					</div>
@@ -172,68 +173,72 @@
 											<a href="{% url 'home:home' %}">Главная</a>
 										</li>
 										<li>
-											Контакты
+											Статьи
 										</li>
 									</ul>
 								</div>
 							</div>
 
-						<div class="col-xs-12">
-							<div class="our_contact clearfix">
-								<div id="success">
-									<div role="alert" class="alert alert-success">
-										<strong>Thanks</strong> for using our template. Your message has been sent.
+							<div class="col-xs-12">
+								<div class="blog-container-1">
+									<div class="blog-list clearfix">
+										{% for article in articles %}
+										<article class="zoom clearfix">
+
+											<figure class="img-box">
+												<a href="blog-post.html"><img src="{% static 'img/blog-img-1.jpg' %}" alt="" /></a>
+											</figure>
+											<!--style="height: 373px;margin: 0 0 1em 0;overflow: hidden;-webkit-line-clamp: 5;-webkit-box-orient: vertical;-->
+											<div class="detail">
+												<ul class="post-detail clearfix">
+													<li>
+														<a href="#">{{ article.article_date }}</a>
+													</li>
+													<li>
+														<a href="#">By GidroSave</a>
+													</li>
+													<!--<li>-->
+														<!--<a href="#">Comments</a>-->
+													<!--</li>-->
+												</ul>
+												<h3><a href="/articles/get/{{ article.id }}">{{ article.article_title }}</a> <i></i></h3>
+												<p>
+													{{ article.short_text }}
+												</p>
+												<a href="/articles/get/{{ article.id }}" class="more">Подробнее</a>
+											</div>
+
+										</article>
+
+										{% endfor %}
+										{% if articles.has_other_pages %}
+											<ul class="pagination-box animate-effect">
+											{% if articles.has_previous %}
+												<li><a href="?page={{ articles.previous_page_number }}">&laquo;</a></li>
+    										{% else %}
+												<li class="disabled"><span>&laquo;</span></li>
+    										{% endif %}
+											{% for i in articles.paginator.page_range %}
+      											{% if articles.number == i %}
+        											<li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      											{% else %}
+        											<li><a href="?page={{ i }}">{{ i }}</a></li>
+      											{% endif %}
+    										{% endfor %}
+    										{% if articles.has_next %}
+      											<li><a href="?page={{ articles.next_page_number }}">&raquo;</a></li>
+    										{% else %}
+      											<li class="disabled"><span>&raquo;</span></li>
+    										{% endif %}
+											</ul>
+										{% endif %}
 									</div>
 								</div>
-								<h3>Связаться с нами <i></i></h3>
-									{% block contactform %}{% endblock %}
-
-
-								<div class="right-detail">
-
-									<address>
-										<strong>Адрес в Москве:</strong>
-										<ul>
-											<a href="#"><i class="fa fa-vk" style="padding-left: 50px;"></i></a>
-											<a href="#"><i class="fa fa-instagram" style="padding-right: 20px; padding-left: 20px; padding-bottom: 25px;"></i></a>
-											<a href="#"><i class="fa fa-facebook"></i></a>
-											<li>
-												<i class="location-svg"><img src="{% static 'svg/05.svg' %}" alt="" class="svg"/></i>
-												<span>ул.Мусы Джалиля</span>
-												<span>д.4, к.4,оффис №349</span>
-											</li>
-
-											<li>
-												<i class="fa fa-phone"></i>
-												<span>8-915-346-11-32</span>
-											</li>
-
-											<li>
-												<i class="fa fa-phone"></i>
-												<span>8-499-725-32-93</span>
-											</li>
-
-											<li>
-												<i class="fa fa-envelope-o"></i>
-												<span><a href="mailto:ly4ok666@gmail.com">ly4ok666@gmail.com</a></span>
-											</li>
-										</ul>
-									</address>
-								</div>
-
 							</div>
-						</div>
 
+						</div>
 					</div>
 				</div>
-
-				<!-- <div class="map-box fade-effect map embed-responsive embed-responsive-16by9">
-				<div id="map"></div> -->
-				<!-- <img src="assets/img/map.jpg" alt="" /> -->
-				<!-- </div> -->
-				<article id="dvMap" class="map-wrapper map embed-responsive embed-responsive-16by9">
-					&nbsp;
-				</article>
 
 			</div>
 			<!--content Section End Here -->
@@ -286,15 +291,14 @@
 				<div class="primary-footer">
 					<div class="container">
 						<div class="row animate-effect">
+							{% for about in abouts %}
 							<div class="col-xs-12 col-sm-4">
-								{% for about in abouts %}
 								<h3>О Компании <i></i></h3>
 								<p>
 									{{ about.short_text }}
 								</p>
-								{% endfor %}
 							</div>
-
+							{% endfor %}
 
 							<div class="col-xs-12 col-sm-4">
 								<h3>Навигация по сайту <i></i></h3>
@@ -309,11 +313,11 @@
 										<a href="{% url 'home:articles' %}">Гидроизол</a>
 									</li>
 									<li>
+										<a href="{% url 'home:blog' %}">Статьи</a>
+									</li>
+									<li>
 										<a href="{% url 'home:contact' %}">Контакты</a>
 									</li>
-									<!--<li>-->
-										<!--<a href="#">Статьи</a>-->
-									<!--</li>-->
 									<!--Возможная ссылка-->
 									<!--<li>-->
 										<!--<a href="#">Contact us</a>-->
@@ -366,9 +370,9 @@
 							<!--</div>-->
 								<!--<span>Ly4ok666 | © 2017 Ly4ok_Industrial, All rights reserved</span>-->
 							<!--</div>-->
+							</div>
 						</div>
 					</div>
-				</div>
 					</div>
 				</div>
 			</footer>
@@ -382,14 +386,8 @@
 		<script src="{% static 'js/less.js' %}"></script>
 		<script src="{% static 'js/jquery.bxslider.js' %}"></script>
 		<script defer src="{% static 'js/jquery.flexslider.js' %}"></script>
-		<!-- Google Map -->
-		<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-		<script type="text/javascript" src="assets/js/custom-mapscript-logistic.js"></script>
-		<!-- Google Map -->
-		<script src="{% static 'js/validation.js' %}"></script>
 		<script src="{% static 'js/site.js' %}"></script>
-		</div>
 		<a href="#" class="scrollup">Наверх</a>
+		
 	</body>
-
 </html>

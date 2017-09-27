@@ -10,17 +10,18 @@ from home.models import Home
 from about.models import About, ShortAbout
 from content.models import Article, Features
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-# from about_card.models import Card
-# from start.models import StartContent
-# from end.models import EndContent
+from article.models import Blog
 
 
-def home(request):
+
+def home(request,article_id=1):
     """Домашняя страница нашего проекта"""
     contexts = Home.objects.all()
+    # images = HomeImg.objects.all()
     # краткое о нас
     abouts = ShortAbout.objects.all()
     return render(request, 'index.html',locals())
+
 
 def about(request):
     """Страница о компании"""
@@ -80,7 +81,7 @@ def contact(request):
             template = get_template('contact_template.txt')
             context = {'contact_name': contact_name, 'contact_email': contact_email, 'form_content': form_content}
             content = template.render(context)
-            email = EmailMessage("New contact form submission", content, "Your website" + '', ['ly4ok666@gmail.com'], headers={'Reply-To': contact_email})
+            email = EmailMessage("New contact form submission", content, "Your website" + '', ['gidrosave@gmail.com'], headers={'Reply-To': contact_email})
             email.send()
         # return render('contact')
         # Переходим на другую страницу, если сообщение отправлено
@@ -91,3 +92,30 @@ def contact(request):
 # def thanks(reguest):
 #     thanks = 'thanks'
 #     return render(reguest, 'thanks.html', {'thanks': thanks})
+
+def blog(request):
+    # article = {'article': Article.objects.get(id=article_id)}
+    #Вывод всех статей и пагинация (2 статьи на страницу)"""
+    # краткое о нас
+    abouts = ShortAbout.objects.all()
+    all_Articles = Blog.objects.all()
+    paginator = Paginator(all_Articles, 1)
+    page = request.GET.get('page')
+
+    try:
+        articles = paginator.page(page)
+    except PageNotAnInteger:
+        articles = paginator.page(1)
+    except EmptyPage:
+        articles = paginator.page(paginator.num_pages)
+    context = {'articles': articles}
+    return render(request, 'blog.html', locals())
+
+def blogpost(request,article_id=1):
+    """Вывод одной конкретной статьи """
+    # краткое о нас
+    abouts = ShortAbout.objects.all()
+    # articles = Article.objects.get(id=article_id)
+    # features = Features.objects.filter(features_article_id=article_id)
+    # return render(request, 'home/article.html', locals())
+    return render_to_response('article/blogpost.html', {'articles': Blog.objects.get(id=article_id),'abouts': abouts})

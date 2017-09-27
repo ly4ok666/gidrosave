@@ -13,7 +13,7 @@
 								<div class="clearfix">
 									<div class="box">
 										<i class="icon-goal"></i>
-										<strong>PROJECT GOALS</strong>
+										<strong>Цели Проекта</strong>
 										<p>
 											{{ article.goals_1 }}
 										</p>
@@ -21,14 +21,14 @@
 
 									<div class="box odd">
 										<i class="icon-eco"></i>
-										<strong>PROJECT GOALS</strong>
+										<strong>Цели Проекта</strong>
 										<p>
 											{{ article.goals_2 }}
 										</p>
 									</div>
 								</div>
 
-								<h5>features of this project <i></i></h5>
+								<h5>Особенности этого проекта <i></i></h5>
 								<ul class="feature-list clearfix">
 									{% for feature in features %}
 									<li>
@@ -37,7 +37,6 @@
 									</li>
 									{% endfor %}
 								</ul>
-
 							</div>
 
 							<div class="col-xs-12 col-sm-5">
@@ -45,37 +44,39 @@
 									<ul class="img-box clearfix">
 										<li class="zoom fade-effect">
 											<figure>
-												<a href="projects-details.html"><img src="{% static 'img/profile-img-3.png' %}" alt="" /></a>
+												<a href="{{ MEDIA_URL }}{{ article.article_image.url }}"><img src="{{ MEDIA_URL }}{{ article.article_image.url }}" alt="" /></a>
 											</figure>
 										</li>
 										<li class="zoom fade-effect">
 											<figure>
-												<a href="projects-details.html"><img src="{% static 'img/profile-img-4.png' %}" alt="" /></a>
+												<a href="{{ MEDIA_URL }}{{ article.article_image.url }}"><img src="{{ MEDIA_URL }}{{ article.article_image.url }}" alt="" /></a>
 											</figure>
 										</li>
 										<li class="zoom fade-effect">
 											<figure>
-												<a href="projects-details.html"><img src="{% static 'img/profile-img-5.png' %}" alt="" /></a>
+												<a href="{{ MEDIA_URL }}{{ article.article_image.url }}"><img src="{{ MEDIA_URL }}{{ article.article_image.url }}" alt="" /></a>
 											</figure>
 										</li>
 										<li class="zoom fade-effect">
 											<figure>
-												<a href="projects-details.html"><img src="{% static 'img/profile-img-6.png' %}" alt="" /></a>
+												<a href="{{ MEDIA_URL }}{{ article.article_image.url }}"><img src="{{ MEDIA_URL }}{{ article.article_image.url }}" alt="" /></a>
 											</figure>
 										</li>
 									</ul>
 
 									<ul class="pro-slider fade-effect">
 										<li>
-											<a href="projects-details.html"><img src="{% static 'img/profile-img-7.jpg' %}" alt="" /></a>
+											<a href="{{ MEDIA_URL }}{{ article.article_image.url }}"><img src="{{ MEDIA_URL }}{{ article.article_image.url }}" alt="" /></a>
 										</li>
-										<li><a href="projects-details.html"><img src="{% static 'img/profile-img-8.jpg' %}" alt="" /></a>
+										<li><a href="{{ MEDIA_URL }}{{ article.article_image.url }}"><img src="{{ MEDIA_URL }}{{ article.article_image.url }}" alt="" /></a>
 										</li>
 									</ul>
 
 								</div>
 							</div>
-
+							<div class="social-list clearfix">
+								<button class="contact-us" style="margin-top: 60px;margin-left: 80px;background-color: rgba(241, 241, 241, 0);" onclick="history.back();"><b>Вернуться</b></button>
+							</div>
 						</div>
 
 					</div>

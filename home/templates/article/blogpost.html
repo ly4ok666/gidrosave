@@ -1,6 +1,7 @@
 <!DOCTYPE html>
+{% load embed_video_tags %}
 {% load staticfiles %}
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -44,10 +45,11 @@
 	</head>
 	<body>
 		<!--Wrapper Section Start Here -->
-		<div id="wrapper">
-			<div id="pageloader" class="row m0">
-				<div class="loader-item"><img src="assets/svg/grid.svg" alt="loading"></div>
-			</div>
+	
+<div id="wrapper">
+ <div id="pageloader" class="row m0">
+       <div class="loader-item"><img src="assets/svg/grid.svg" alt="loading"></div>
+    </div> 
 			<!--header Section Start Here -->
 			<header id="header">
 				<div class="primary-header">
@@ -131,10 +133,10 @@
 												<!--</li>-->
 											<!--</ul>-->
 										<!--</li>-->
-										<li>
+										<li class="active">
 											<a href="{% url 'home:blog' %}">Статьи</a>
 										</li>
-										<li class="active">
+										<li>
 											<a href="{% url 'home:contact' %}">Контакты</a>
 										</li>
 									</ul>
@@ -156,7 +158,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-12">
-								<h3>Наши Контакты</h3>
+								<h3>Статьи</h3>
 							</div>
 						</div>
 					</div>
@@ -172,69 +174,110 @@
 											<a href="{% url 'home:home' %}">Главная</a>
 										</li>
 										<li>
-											Контакты
+											Статьи
 										</li>
 									</ul>
 								</div>
 							</div>
-
-						<div class="col-xs-12">
-							<div class="our_contact clearfix">
-								<div id="success">
-									<div role="alert" class="alert alert-success">
-										<strong>Thanks</strong> for using our template. Your message has been sent.
-									</div>
-								</div>
-								<h3>Связаться с нами <i></i></h3>
-									{% block contactform %}{% endblock %}
-
-
-								<div class="right-detail">
-
-									<address>
-										<strong>Адрес в Москве:</strong>
-										<ul>
-											<a href="#"><i class="fa fa-vk" style="padding-left: 50px;"></i></a>
-											<a href="#"><i class="fa fa-instagram" style="padding-right: 20px; padding-left: 20px; padding-bottom: 25px;"></i></a>
-											<a href="#"><i class="fa fa-facebook"></i></a>
-											<li>
-												<i class="location-svg"><img src="{% static 'svg/05.svg' %}" alt="" class="svg"/></i>
-												<span>ул.Мусы Джалиля</span>
-												<span>д.4, к.4,оффис №349</span>
-											</li>
-
-											<li>
-												<i class="fa fa-phone"></i>
-												<span>8-915-346-11-32</span>
-											</li>
-
-											<li>
-												<i class="fa fa-phone"></i>
-												<span>8-499-725-32-93</span>
-											</li>
-
-											<li>
-												<i class="fa fa-envelope-o"></i>
-												<span><a href="mailto:ly4ok666@gmail.com">ly4ok666@gmail.com</a></span>
-											</li>
-										</ul>
-									</address>
-								</div>
-
-							</div>
 						</div>
-
 					</div>
 				</div>
 
-				<!-- <div class="map-box fade-effect map embed-responsive embed-responsive-16by9">
-				<div id="map"></div> -->
-				<!-- <img src="assets/img/map.jpg" alt="" /> -->
-				<!-- </div> -->
-				<article id="dvMap" class="map-wrapper map embed-responsive embed-responsive-16by9">
-					&nbsp;
-				</article>
+				<div class="blog-container-2">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-4 right-body ">
+								<div class="inner-content">
 
+									<div class="post-list">
+										<h3>Awesome Posts <i></i></h3>
+										<ul>
+
+											<li>
+												<a href="/articles/get/{{ article.id }}">{{ articles.article_title }}</a>
+											</li>
+
+											<li>
+												<a href="/articles/get/{{ article.id }}">{{ articles.article_title }}</a>
+											</li>
+											<li>
+												<a href="#">Make your living room  enjoyable</a>
+											</li>
+											<li>
+												<a href="#">How Important is Light in the Room?</a>
+											</li>
+											<li>
+												<a href="#">Become a master of backyard tiling</a>
+											</li>
+											<li>
+												<a href="#">How Important is Light in the Room?</a>
+											</li>
+										</ul>
+									</div>
+
+									<div class="categories-list animate-effect">
+										<h3>Карта сайта <i></i></h3>
+										<ul>
+											<li>
+												<a href="#">Главная</a>
+											</li>
+											<li>
+												<a href="#">О нас</a>
+											</li>
+											<li>
+												<a href="#">Работы</a>
+											</li>
+											<li>
+												<a href="#">Контакты</a>
+											</li>
+										</ul>
+									</div>
+
+									<div class="meta-list animate-effect">
+										<!--<h3><i></i></h3>-->
+										<ul class="clearfix">
+											<li>
+												<a href="#" class="tag-6"><i class="second"></i> Вернуться назад к статьям</a>
+
+											</li>
+										</ul>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-sm-8 left-body ">
+
+								<article class="full-box post">
+									<figure>
+										<img src="{% static 'img/blog-img-5.jpg' %}" alt="" class="img2" />
+									</figure>
+									<div class="detail animate-effect">
+										<ul class="post-detail clearfix">
+											<li>
+												<a href="#">{{ articles.article_date }}</a>
+											</li>
+											<li>
+												<a href="#">By GidroSave</a>
+											</li>
+										</ul>
+										<h3>{{ articles.article_title }} <i></i></h3>
+										<div class="media-detail">
+											<img src="{% static 'img/media-img.jpg' %}" alt="" />
+										</div>
+										<div class="post-msg">
+											<p>
+												{% autoescape off %}{{ articles.article_text }}{% endautoescape %}
+											</p>
+										</div>
+
+									</div>
+								</article>
+
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<!--content Section End Here -->
 
@@ -247,35 +290,17 @@
 						<div class="row">
 							<div class="col-xs-12 animate-effect">
 								<div class="box">
-									<!--<em class="location-svg"><img src="{% static 'svg/05.svg' %}" alt="" class="svg"/></em>-->
-									<!--<strong>227 Marion Street</strong>-->
-									<!--<span>Columbia, SC 29201</span>-->
 								</div>
 
 								<div class="box call">
-									<!--<em class="fa fa-phone"></em>-->
-									<!--<strong>1-888-123-4567</strong>-->
-									<!--<span><a href="mailto:info@industrial.com">info@industrial.com</a></span>-->
 								</div>
 
 								<div class="box" style="height: 128px">
 									<ul class="clearfix">
-										<!--<li>-->
-											<!--<a href="#"><i class="fa fa-facebook"></i></a>-->
-										<!--</li>-->
-										<!--<li>-->
-											<!--<a href="#"><i class="fa fa-twitter"></i></a>-->
-										<!--</li>-->
-										<!--<li>-->
-											<!--<a href="#"><i class="fa fa-google-plus"></i></a>-->
-										<!--</li>-->
 									</ul>
 								</div>
 
 								<div class="box call">
-										<!--<em class="fa fa-envelope-o"></em>-->
-										<!--<span><a href="mailto:info@industrail.com">info@industrail.com</a></span>-->
-									<!--<a class="contact-us" href="#">CONTACT US</a>-->
 								</div>
 							</div>
 						</div>
@@ -286,15 +311,14 @@
 				<div class="primary-footer">
 					<div class="container">
 						<div class="row animate-effect">
+							{% for about in abouts %}
 							<div class="col-xs-12 col-sm-4">
-								{% for about in abouts %}
 								<h3>О Компании <i></i></h3>
 								<p>
 									{{ about.short_text }}
 								</p>
-								{% endfor %}
 							</div>
-
+							{% endfor %}
 
 							<div class="col-xs-12 col-sm-4">
 								<h3>Навигация по сайту <i></i></h3>
@@ -309,11 +333,11 @@
 										<a href="{% url 'home:articles' %}">Гидроизол</a>
 									</li>
 									<li>
+										<a href="{% url 'home:blog' %}">Статьи</a>
+									</li>
+									<li>
 										<a href="{% url 'home:contact' %}">Контакты</a>
 									</li>
-									<!--<li>-->
-										<!--<a href="#">Статьи</a>-->
-									<!--</li>-->
 									<!--Возможная ссылка-->
 									<!--<li>-->
 										<!--<a href="#">Contact us</a>-->
@@ -363,12 +387,9 @@
 										<a href="#"><i class="fa fa-facebook"></i></a>
 									</li>
 								</ul>
-							<!--</div>-->
-								<!--<span>Ly4ok666 | © 2017 Ly4ok_Industrial, All rights reserved</span>-->
-							<!--</div>-->
+							</div>
 						</div>
 					</div>
-				</div>
 					</div>
 				</div>
 			</footer>
@@ -376,20 +397,14 @@
 
 		</div>
 		<!--Wrapper Section End Here -->
-
-		<script src="{% static 'js/jquery-1.11.2.min.js' %}"></script>
+<script src="{% static 'js/jquery-1.11.2.min.js' %}"></script>
 		<script src="{% static 'js/bootstrap.min.js' %}"></script>
 		<script src="{% static 'js/less.js' %}"></script>
 		<script src="{% static 'js/jquery.bxslider.js' %}"></script>
 		<script defer src="{% static 'js/jquery.flexslider.js' %}"></script>
-		<!-- Google Map -->
-		<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-		<script type="text/javascript" src="assets/js/custom-mapscript-logistic.js"></script>
-		<!-- Google Map -->
-		<script src="{% static 'js/validation.js' %}"></script>
+		<script src="{% static 'js/vailidation.js' %}"></script>
 		<script src="{% static 'js/site.js' %}"></script>
-		</div>
 		<a href="#" class="scrollup">Наверх</a>
-	</body>
 
+	</body>
 </html>

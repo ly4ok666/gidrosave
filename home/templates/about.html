@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load embed_video_tags %}
 {% load staticfiles %}
 <html lang="en">
 	<head>
@@ -70,7 +71,7 @@
 							<div class="col-sm-7 right-header">
 								<ul>
 									<li>
-										<a href="mailto:ly4ok666@gmail.com"><i class="fa fa-envelope-o"></i> ly4ok666@gmail.com</a>
+										<a href="mailto:gidrosave@gmail.com"><i class="fa fa-envelope-o"></i> gidrosave@gmail.com</a>
 									</li>
 									<li>
 										<a href="#"><i class="fa fa-vk"></i></a>
@@ -102,11 +103,11 @@
 								<nav class="navigation">
 
 									<ul class="menu">
-										<li class="active">
+										<li>
 											<a href="{% url 'home:home' %}">Главная</a>
 
 										</li>
-										<li>
+										<li class="active">
 											<a href="{% url 'home:about' %}">О Нас</a>
 											<!--Возможное подменю-->
 											<!--<ul class="submenu">-->
@@ -125,7 +126,7 @@
 											<!--</ul>-->
 										</li>
 										<li>
-											<a href="{% url 'home:articles' %}">Гидросейв</a>
+											<a href="{% url 'home:articles' %}">Наши работы</a>
 										</li>
 										<!--<li>-->
 											<!--<a href="#">Контакты</a>-->
@@ -143,24 +144,10 @@
 											<!--</ul>-->
 										<!--</li>-->
 										<li>
+											<a href="{% url 'home:blog' %}">Статьи</a>
+										</li>
+										<li>
 											<a href="{% url 'home:contact' %}">Контакты</a>
-											<!--Возможное подменю-->
-											<!--<ul class="submenu">-->
-												<!--<li>-->
-													<!--<a href="blog-1.html">blog-1</a>-->
-												<!--</li>-->
-												<!--<li>-->
-													<!--<a href="blog-2.html">blog-2</a>-->
-												<!--</li>-->
-												<!--<li>-->
-													<!--<a href="blog-post.html">blog-post</a>-->
-												<!--</li>-->
-											<!--</ul>-->
-										<!--Возможная ссылка, перенести под </li>-->
-										<!--<li>-->
-											<!--<a href="contact.html">contact</a>-->
-										<!--</li>-->
-									<!--</ul>-->
 										</li>
 									</ul>
 								</nav>
@@ -170,7 +157,8 @@
 						</div>
 					</div>
 				</div>
-		</header>
+
+			</header>
 			<!--header Section End Here -->
 
 

@@ -4,7 +4,7 @@
 
 {% block contactform %}
 <div class="left-detail clearfix">
-    <strong>Выможете связаться с нами по предложенному телефону или оставить нам сообщение с интересующим вас вопросом и мы обязательно с вами свяжемся</strong>
+    <strong>Вы можете связаться с нами по предложенному телефону или оставить нам сообщение с интересующим вас вопросом и мы обязательно с вами свяжемся</strong>
     <form role="form" action="" method="post">
         {% csrf_token %}
         {{ form.non_field_errors }}
@@ -12,13 +12,13 @@
             <!--{{ form.contact_name.errors }}-->
             <label for="id_contact_name"></label>
             <!--{{ form.contact_name }}-->
-            <input type="text" name="contact_name" placeholder="NAME" required id="id_contact_name">
+            <input type="text" name="contact_name" placeholder="Имя" required id="id_contact_name">
 
             <span class="coll-1">
                 <!--{{ form.contact_email.errors }}-->
                 <label for="id_contact_email"></label>
                 <!--{{ form.contact_email }}-->
-                <input type="text" name="contact_email" placeholder="Введите ваш email" required id="id_contact_email">
+                <input type="text" name="contact_email" placeholder="Введите Ваш email" required id="id_contact_email">
             </span>
 
             <!--<span class="coll-1 last">-->
@@ -29,7 +29,7 @@
                 <!--{{ form.form_content.errors }}-->
                 <label for="id_content"></label>
                 <!--{{ form.form_content }}-->
-                <textarea name="content" placeholder="Введите ваше сообщение" required id="id_content"></textarea>
+                <textarea name="content" placeholder="Введите Ваше сообщение" required id="id_content"></textarea>
                 <!--<input type="button" value="POST MESSAGE" id="submit">-->
                 <button type="submit" style="
                                  float: right;
@@ -45,7 +45,7 @@
                                  padding: 16px 10px;
                                  text-align: center;
                                  margin-top: 10px;
-                ">Submit</button>
+                ">Отправить</button>
             </div>
         </fieldset>
     </form>

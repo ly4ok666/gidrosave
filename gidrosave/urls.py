@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^', include('home.urls', namespace='home')),
     url(r'^', include('about.urls')),
     url(r'^', include('content.urls')),
-
+    url(r'^', include('article.urls')),
 ]

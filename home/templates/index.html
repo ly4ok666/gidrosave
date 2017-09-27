@@ -61,7 +61,7 @@
 							<div class="col-sm-7 right-header">
 								<ul>
 									<li>
-										<a href="mailto:ly4ok666@gmail.com"><i class="fa fa-envelope-o"></i> ly4ok666@gmail.com</a>
+										<a href="mailto:gidrosave@gmail.com"><i class="fa fa-envelope-o"></i> gidrosave@gmail.com</a>
 									</li>
 									<li>
 										<a href="#"><i class="fa fa-vk"></i></a>
@@ -95,7 +95,7 @@
 									<ul class="menu">
 										<li class="active">
 											<a href="{% url 'home:home' %}">Главная</a>
-											
+
 										</li>
 										<li>
 											<a href="{% url 'home:about' %}">О Нас</a>
@@ -116,7 +116,7 @@
 											<!--</ul>-->
 										</li>
 										<li>
-											<a href="{% url 'home:articles' %}">Гидросейв</a>
+											<a href="{% url 'home:articles' %}">Наши работы</a>
 										</li>
 										<!--<li>-->
 											<!--<a href="#">Контакты</a>-->
@@ -134,24 +134,10 @@
 											<!--</ul>-->
 										<!--</li>-->
 										<li>
+											<a href="{% url 'home:blog' %}">Статьи</a>
+										</li>
+										<li>
 											<a href="{% url 'home:contact' %}">Контакты</a>
-											<!--Возможное подменю-->
-											<!--<ul class="submenu">-->
-												<!--<li>-->
-													<!--<a href="blog-1.html">blog-1</a>-->
-												<!--</li>-->
-												<!--<li>-->
-													<!--<a href="blog-2.html">blog-2</a>-->
-												<!--</li>-->
-												<!--<li>-->
-													<!--<a href="blog-post.html">blog-post</a>-->
-												<!--</li>-->
-											<!--</ul>-->
-										<!--Возможная ссылка, перенести под </li>-->
-										<!--<li>-->
-											<!--<a href="contact.html">contact</a>-->
-										<!--</li>-->
-									<!--</ul>-->
 										</li>
 									</ul>
 								</nav>
@@ -180,12 +166,12 @@
 						<div class="detail">
 							<!--<div class="top-row">-->
 								<!--<h2>О компании</h2>-->
-								<!--&lt;!&ndash;<strong>О КОМПАНИИ</strong>&ndash;&gt;-->
+								<!--<strong>О КОМПАНИИ</strong>-->
 
-								<!--&lt;!&ndash;<div class="direction-arrrow">&ndash;&gt;-->
-									<!--&lt;!&ndash;<a href="javascript:;" class="prv"></a>&ndash;&gt;-->
-									<!--&lt;!&ndash;<a href="javascript:;" class="next"></a>&ndash;&gt;-->
-								<!--&lt;!&ndash;</div>&ndash;&gt;-->
+								<!--<div class="direction-arrrow">-->
+									<!--<a href="javascript:;" class="prv"></a>-->
+									<!--<a href="javascript:;" class="next"></a>-->
+								<!--</div>-->
 
 							<!--</div>-->
 							{% for about in abouts %}
@@ -213,7 +199,7 @@
 							<div class="col-xs-12 col-sm-12 about-us">
 								<header class="section-header">
 									<h2>Почему стоит выбрать нас? <i></i></h2>
-									<strong>ВОТ НЕСКОЛЬКО АРГУМЕНТОВ ПОЧЕМУ ЭТО СТОИТ СДЕЛАТЬ.</strong>
+
 								</header>
 
 								<ul class="our-quality clearfix">
@@ -221,7 +207,7 @@
 										<figure class="fade-effect"><img src="{% static 'svg/svg1.svg' %}" class="svg" alt="" />
 										</figure>
 										<div class="animate-effect">
-										<strong>РАБОТАЕМ ДО НУЖНОГО РЕЗУЛЬТАТА</strong>
+										<strong>СТАВИМ ЦЕЛИ И ДОБИВАЕМСЯ ЛУЧШЕГО РЕЗУЛЬТАТА</strong>
 										<p>
 											<!--БЕСПЛАТНЫЙ ВЫЕЗД СПЕЦИАЛИСТА-->
 										</p>
@@ -231,7 +217,7 @@
 										<figure class="fade-effect"><img src="{% static 'svg/clock.svg' %}" class="svg" alt="" />
 										</figure>
 										<div class="animate-effect">
-										<strong>ПРИСТУПАЕМ К РАБОТЕ ОПЕРАТИВНО</strong>
+										<strong>ОПЕРАТИВНОСТЬ И ПУНКТУАЛЬНОСТЬ</strong>
 										<p>
 											<!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec erat erat. Integer blandit, nullahendrerit,-->
 										</p>
@@ -252,7 +238,7 @@
 										<figure class="fade-effect"><img src="{% static 'svg/hands.svg' %}" class="svg" alt="" />
 										</figure>
 										<div class="animate-effect">
-										<strong>НАС РЕКОМЕНДУЮТ</strong>
+										<strong>МЫ ЛЮБИМ ВЕКТОРНЫЕ КАРТИНКИ</strong>
 										<p>
 											<!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec erat erat. Integer blandit, nullahendrerit,-->
 										</p>
@@ -282,290 +268,64 @@
 											<p>{% autoescape off %}{{ context.home_text }}{% endautoescape %}</p>
 											<!--<a href="#" class="quote">Есть вопрос?</a>-->
 										</li>
-											<!--Текст на каждую кнопку слайдера-->
-										<!--<li>-->
-											<!--<h2>WHAT WE DO 2 <i></i></h2>-->
-											<!--<strong>WE OFFER AN ALL ROUND CONDO REMODELLING SERVICES</strong>-->
-											<!--<p>-->
-												<!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec erat erat. Integer blandit, nulla quis fermentum hendrerit, nisi diam viverra metus, porta semper est ipsum et sapien. feugiat viverra diam.felis tortor, euismod ac tortor ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec erat erat. Integer blandit, nulla quis fermentum hendrerit, nisi diam viverra metus, porta semper est ipsum et sapien-->
-											<!--</p>-->
-											<!--<a href="#" class="quote">GET A QUOTE</a>-->
-										<!--</li>-->
-
-										<!--<li>-->
-											<!--<h2>WHAT WE DO 3 <i></i></h2>-->
-											<!--<strong>WE OFFER AN ALL ROUND CONDO REMODELLING SERVICES</strong>-->
-											<!--<p>-->
-												<!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec erat erat. Integer blandit, nulla quis fermentum hendrerit, nisi diam viverra metus, porta semper est ipsum et sapien. feugiat viverra diam.felis tortor, euismod ac tortor ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec erat erat. Integer blandit, nulla quis fermentum hendrerit, nisi diam viverra metus, porta semper est ipsum et sapien-->
-											<!--</p>-->
-											<!--<a href="#" class="quote">GET A QUOTE</a>-->
-										<!--</li>-->
-										<!--<li>-->
-											<!--<h2>WHAT WE DO 4 <i></i></h2>-->
-											<!--<strong>WE OFFER AN ALL ROUND CONDO REMODELLING SERVICES</strong>-->
-											<!--<p>-->
-												<!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec erat erat. Integer blandit, nulla quis fermentum hendrerit, nisi diam viverra metus, porta semper est ipsum et sapien. feugiat viverra diam.felis tortor, euismod ac tortor ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec erat erat. Integer blandit, nulla quis fermentum hendrerit, nisi diam viverra metus, porta semper est ipsum et sapien-->
-											<!--</p>-->
-											<!--<a href="#" class="quote">GET A QUOTE</a>-->
-										<!--</li>-->
-										<!--<li>-->
-											<!--<h2>WHAT WE DO 5 <i></i></h2>-->
-											<!--<strong>WE OFFER AN ALL ROUND CONDO REMODELLING SERVICES</strong>-->
-											<!--<p>-->
-												<!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec erat erat. Integer blandit, nulla quis fermentum hendrerit, nisi diam viverra metus, porta semper est ipsum et sapien. feugiat viverra diam.felis tortor, euismod ac tortor ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec erat erat. Integer blandit, nulla quis fermentum hendrerit, nisi diam viverra metus, porta semper est ipsum et sapien-->
-											<!--</p>-->
-											<!--<a href="#" class="quote">GET A QUOTE</a>-->
-										<!--</li>-->
-
 									</ul>
 								</div>
 							</div>
 
 								<!--Кнопки слайдера -->
-							<!--<div class="col-xs-12 animate-effect">-->
+
+							<div class="col-xs-12 animate-effect">
 								<!--<div id="carousel" class="flexslider">-->
-									<!--<ul class="our-service slides clearfix">-->
-										<!--<li class="zoom">-->
-											<!--<a href="#"> <em class="fa fa-caret-up"></em>-->
-											<!--<figure class="fade-effect">-->
-												<!--<img src="assets/img/image-1.jpg" alt="" />-->
-											<!--</figure> <strong> <i></i>design<span>and build</span> </strong> </a>-->
-										<!--</li>-->
-
-										<!--<li class="zoom">-->
-											<!--<a href="#"> <em class="fa fa-caret-up"></em>-->
-											<!--<figure class="fade-effect">-->
-												<!--<img src="assets/img/image-2.jpg" alt="" />-->
-											<!--</figure> <strong> <i></i>condo<span>remodeling</span> </strong> </a>-->
-
-										<!--</li>-->
-
-										<!--<li class="zoom">-->
-											<!--<a href="#"> <em class="fa fa-caret-up"></em>-->
-											<!--<figure class="fade-effect">-->
-												<!--<img src="assets/img/image-3.jpg" alt="" />-->
-											<!--</figure> <strong> <i></i>construction <span>management</span> </strong> </a>-->
-
-										<!--</li>-->
-
-										<!--<li class="zoom">-->
-											<!--<a href="#"> <em class="fa fa-caret-up"></em>-->
-											<!--<figure class="fade-effect">-->
-												<!--<img src="assets/img/image-4.jpg" alt="" />-->
-											<!--</figure> <strong> <i></i>tiling<span>and painting</span> </strong> </a>-->
-
-										<!--</li>-->
-
-										<!--<li class="zoom">-->
-											<!--<a href="#"> <em class="fa fa-caret-up"></em>-->
-											<!--<figure class="fade-effect">-->
-												<!--<img src="assets/img/image-5.jpg" alt="" />-->
-											<!--</figure> <strong> <i></i>kitchen <span>remodeling</span> </strong> </a>-->
-
-										<!--</li>-->
-									<!--</ul>-->
-								<!--</div>-->
-							<!--</div>-->
+									<ul class="our-service slides clearfix">
+										{% if context.home_image_1 %}
+										<li class="zoom">
+											<a href="{{ MEDIA_URL }}{{ context.home_image_1.url }}"> <em class="fa fa-caret-up"></em>
+											<figure class="fade-effect">
+												<img src="{{ MEDIA_URL }}{{ context.home_image_1.url }}" width="200px"  alt="" />
+											</figure> <strong> <i></i><span></span> </strong> </a>
+										</li>
+										{% endif %}
+										{% if context.home_image_2 %}
+										<li class="zoom">
+											<a href="{{ MEDIA_URL }}{{ context.home_image_2.url }}"> <em class="fa fa-caret-up"></em>
+											<figure class="fade-effect">
+												<img src="{{ MEDIA_URL }}{{ context.home_image_2.url }}" width="200px" alt="" />
+											</figure> <strong> <i></i><span></span> </strong> </a>
+										</li>
+										{% endif %}
+										{% if context.home_image_3 %}
+										<li class="zoom">
+											<a href="{{ MEDIA_URL }}{{ context.home_image_3.url }}"> <em class="fa fa-caret-up"></em>
+											<figure class="fade-effect">
+												<img src="{{ MEDIA_URL }}{{ context.home_image_3.url }}" width="200px" alt="" />
+											</figure> <strong> <i></i><span></span> </strong> </a>
+										</li>
+										{% endif %}
+										{% if context.home_image_4 %}
+										<li class="zoom">
+											<a href="{{ MEDIA_URL }}{{ context.home_image_4.url }}"> <em class="fa fa-caret-up"></em>
+											<figure class="fade-effect">
+												<img src="{{ MEDIA_URL }}{{ context.home_image_4.url }}" width="200px" alt="" />
+											</figure> <strong> <i></i><span></span> </strong> </a>
+										</li>
+										{% endif %}
+										{% if context.home_image_5 %}
+										<li class="zoom">
+											<a href="{{ MEDIA_URL }}{{ context.home_image_5.url }}"> <em class="fa fa-caret-up"></em>
+											<figure class="fade-effect">
+												<img src="{{ MEDIA_URL }}{{ context.home_image_5.url }}" width="200px" alt="" />
+											</figure> <strong> <i></i><span></span> </strong> </a>
+										</li>
+										{% endif %}
+									</ul>
+								</div>
+							</div>
 
 						</div>
 					</div>
 				</div>
 				{% endfor %}
 				<!--Конец контента home.html-->
-				<!--Начало контента с тремя колонками-->
-				<!--<div class="service-container-3">-->
-					<!--<div class="container">-->
-						<!--<div class="row">-->
-
-							<!--<div class="left-detail">-->
-
-								<!--<h2>WHAT WE HAVE DONE <i></i></h2>-->
-								<!--<strong>OUR EXPERTS DELIVER INNOVATIVE, EFFICIENT &amp; VALUE-DRIVEN SOLUTIONS FOR CUSTOMERS IN ENERGY.</strong>-->
-
-								<!--<a href="#" class="quote animate-effect">GET A QUOTE</a>-->
-
-								<!--<ul class="office-list clearfix">-->
-									<!--<li class="zoom">-->
-										<!--<figure class="fade-effect">-->
-											<!--<a href="projects-details.html"><img src="assets/img/image-25.jpg" alt="" /></a>-->
-										<!--</figure>-->
-										<!--<div class="detail animate-effect">-->
-											<!--<h4><a href="projects-details.html">manchester central delivery office</a></h4>-->
-											<!--<p>-->
-												<!--Lorem ipsum dolor sit amet, consectetur adipiscing nulla quis fermentum hendrerit, nisi diam viverra feugiat viverra diam.felis tortor-->
-											<!--</p>-->
-										<!--</div>-->
-									<!--</li>-->
-									<!--<li class="zoom">-->
-										<!--<figure class="fade-effect">-->
-											<!--<a href="projects-details.html"><img src="assets/img/image-26.jpg" alt="" /></a>-->
-										<!--</figure>-->
-										<!--<div class="detail animate-effect">-->
-											<!--<h4><a href="projects-details.html">manchester central delivery office</a></h4>-->
-											<!--<p>-->
-												<!--Lorem ipsum dolor sit amet, consectetur adipiscing nulla quis fermentum hendrerit, nisi diam viverra feugiat viverra diam.felis tortor-->
-											<!--</p>-->
-										<!--</div>-->
-									<!--</li>-->
-									<!--<li class="zoom">-->
-										<!--<figure class="fade-effect">-->
-											<!--<a href="projects-details.html"><img src="assets/img/image-27.jpg" alt="" /></a>-->
-										<!--</figure>-->
-										<!--<div class="detail animate-effect">-->
-											<!--<h4><a href="projects-details.html">manchester central delivery office</a></h4>-->
-											<!--<p>-->
-												<!--Lorem ipsum dolor sit amet, consectetur adipiscing nulla quis fermentum hendrerit, nisi diam viverra feugiat viverra diam.felis tortor-->
-											<!--</p>-->
-										<!--</div>-->
-									<!--</li>-->
-								<!--</ul>-->
-
-							<!--</div>-->
-
-						<!--</div>-->
-					<!--</div>-->
-				<!--</div>-->
-					<!--Конец контента с тремя колонками-->
-
-
-				<!--Тематический контент с цитатами и тд -->
-				<!--<div class="our-testimonial-1">-->
-					<!--<div class="container">-->
-						<!--<div class="row">-->
-							<!--<div class="col-sm-12">-->
-								<!--<div class="heading-row animate-effect">-->
-									<!--<h2><span>WHAT OUR</span> CUSTOMER SAYS</h2>-->
-								<!--</div>-->
-								<!--<ul class="testimonial-slider animate-effect">-->
-									<!--<li>-->
-
-										<!--<blockquote>-->
-											<!--<i class="fa fa-quote-right"></i>-->
-											<!--<p>-->
-												<!--Our construction managment professionals organize, lead and manage the people, materials and processes of construction utilizing the latest technologies within the industry. Our construction management Our construction management. Some dummy conent will be appear here.-->
-											<!--</p>-->
-											<!--<footer>-->
-												<!--LENNIE LAZENBY-->
-											<!--</footer>-->
-										<!--</blockquote>-->
-									<!--</li>-->
-
-									<!--<li>-->
-
-										<!--<blockquote>-->
-											<!--<i class="fa fa-quote-right"></i>-->
-											<!--<p>-->
-												<!--Our construction managment professionals organize, lead and manage the people, materials and processes of construction utilizing the latest technologies within the industry. Our construction management Our construction management. Some dummy conent will be appear here.-->
-											<!--</p>-->
-											<!--<footer>-->
-												<!--LENNIE LAZENBY 222-->
-											<!--</footer>-->
-										<!--</blockquote>-->
-									<!--</li>-->
-
-									<!--<li>-->
-
-										<!--<blockquote>-->
-											<!--<i class="fa fa-quote-right"></i>-->
-											<!--<p>-->
-												<!--Our construction managment professionals organize, lead and manage the people, materials and processes of construction utilizing the latest technologies within the industry. Our construction management Our construction management. Some dummy conent will be appear here.-->
-											<!--</p>-->
-											<!--<footer>-->
-												<!--LENNIE LAZENBY 333-->
-											<!--</footer>-->
-										<!--</blockquote>-->
-									<!--</li>-->
-
-									<!--<li>-->
-
-										<!--<blockquote>-->
-											<!--<i class="fa fa-quote-right"></i>-->
-											<!--<p>-->
-												<!--Our construction managment professionals organize, lead and manage the people, materials and processes of construction utilizing the latest technologies within the industry. Our construction management Our construction management. Some dummy conent will be appear here.-->
-											<!--</p>-->
-											<!--<footer>-->
-												<!--LENNIE LAZENBY 444-->
-											<!--</footer>-->
-										<!--</blockquote>-->
-									<!--</li>-->
-
-								<!--</ul>-->
-							<!--</div>-->
-						<!--</div>-->
-					<!--</div>-->
-				<!--</div>-->
-				<!--Конец тематического контента -->
-
-				<!--Контент с партнёркой -->
-				<!--<div class="our-partners">-->
-					<!--<div class="container">-->
-						<!--<div class="row">-->
-							<!--<div class="col-xs-12 ">-->
-								<!--<h2><span>OUR <i></i></span> PARTNERS</h2>-->
-								<!--<ul class="clearfix animate-effect">-->
-									<!--<li class="zoom">-->
-										<!--<a href="#"><img src="assets/img/partner-1.png" alt="" /></a>-->
-									<!--</li>-->
-									<!--<li class="zoom">-->
-										<!--<a href="#"><img src="assets/img/partner-2.png" alt="" /></a>-->
-									<!--</li>-->
-									<!--<li class="zoom">-->
-										<!--<a href="#"><img src="assets/img/partner-3.png" alt="" /></a>-->
-									<!--</li>-->
-									<!--<li class="zoom">-->
-										<!--<a href="#"><img src="assets/img/partner-4.png" alt="" /></a>-->
-									<!--</li>-->
-									<!--<li class="zoom">-->
-										<!--<a href="#"><img src="assets/img/partner-5.png" alt="" /></a>-->
-									<!--</li>-->
-									<!--<li class="zoom">-->
-										<!--<a href="#"><img src="assets/img/partner-6.png" alt="" /></a>-->
-									<!--</li>-->
-									<!--<li class="zoom">-->
-										<!--<a href="#"><img src="assets/img/partner-7.png" alt="" /></a>-->
-									<!--</li>-->
-									<!--<li class="zoom">-->
-										<!--<a href="#"><img src="assets/img/partner-8.png" alt="" /></a>-->
-									<!--</li>-->
-									<!--<li class="zoom">-->
-										<!--<a href="#"><img src="assets/img/partner-9.png" alt="" /></a>-->
-									<!--</li>-->
-									<!--<li class="zoom">-->
-										<!--<a href="#"><img src="assets/img/partner-10.png" alt="" /></a>-->
-									<!--</li>-->
-									<!--<li class="zoom">-->
-										<!--<a href="#"><img src="assets/img/partner-11.png" alt="" /></a>-->
-									<!--</li>-->
-									<!--<li class="zoom">-->
-										<!--<a href="#"><img src="assets/img/partner-12.png" alt="" /></a>-->
-									<!--</li>-->
-								<!--</ul>-->
-
-							<!--</div>-->
-						<!--</div>-->
-					<!--</div>-->
-				<!--</div>-->
-				<!--Конец контента с партнёркой -->
-
-				<!--Контент свободный для мысли -->
-				<!--<div class="quote-container">-->
-					<!--<div class="right-banner"></div>-->
-					<!--<div class="container">-->
-						<!--<div class="row">-->
-							<!--<div class="col-xs-12">-->
-								<!--<div class="quote-box animate-effect">-->
-									<!--<h4>PROVIDING PERSONALIZED AND HIGH QUALITY SERVICES. <i></i></h4>-->
-									<!--<p>-->
-										<!--Lorem ipsum dolor sit amet, consectetur adipiscing elit Quisque nec erat erat.-->
-									<!--</p>-->
-									<!--<a href="#">GET A QUOTE</a>-->
-								<!--</div>-->
-							<!--</div>-->
-						<!--</div>-->
-					<!--</div>-->
-				<!--</div>-->
-				<!--Конец контента свободомыслия -->
-
 			</div>
 
 
@@ -578,35 +338,17 @@
 						<div class="row">
 							<div class="col-xs-12 animate-effect">
 								<div class="box">
-									<!--<em class="location-svg"><img src="{% static 'svg/05.svg' %}" alt="" class="svg"/></em>-->
-									<!--<strong>227 Marion Street</strong>-->
-									<!--<span>Columbia, SC 29201</span>-->
 								</div>
 
 								<div class="box call">
-									<!--<em class="fa fa-phone"></em>-->
-									<!--<strong>1-888-123-4567</strong>-->
-									<!--<span><a href="mailto:info@industrial.com">info@industrial.com</a></span>-->
 								</div>
 
 								<div class="box" style="height: 128px">
 									<ul class="clearfix">
-										<!--<li>-->
-											<!--<a href="#"><i class="fa fa-facebook"></i></a>-->
-										<!--</li>-->
-										<!--<li>-->
-											<!--<a href="#"><i class="fa fa-twitter"></i></a>-->
-										<!--</li>-->
-										<!--<li>-->
-											<!--<a href="#"><i class="fa fa-google-plus"></i></a>-->
-										<!--</li>-->
 									</ul>
 								</div>
 
 								<div class="box call">
-										<!--<em class="fa fa-envelope-o"></em>-->
-										<!--<span><a href="mailto:info@industrail.com">info@industrail.com</a></span>-->
-									<!--<a class="contact-us" href="#">CONTACT US</a>-->
 								</div>
 							</div>
 						</div>
@@ -625,6 +367,7 @@
 								</p>
 							</div>
 							{% endfor %}
+
 							<div class="col-xs-12 col-sm-4">
 								<h3>Навигация по сайту <i></i></h3>
 								<ul class="list clearfix">
@@ -635,14 +378,14 @@
 										<a href="{% url 'home:about' %}">О нас</a>
 									</li>
 									<li>
-										<a href="{% url 'home:articles' %}">Гидроизол</a>
+										<a href="{% url 'home:articles' %}">Наши работы</a>
+									</li>
+									<li>
+										<a href="{% url 'home:blog' %}">Статьи</a>
 									</li>
 									<li>
 										<a href="{% url 'home:contact' %}">Контакты</a>
 									</li>
-									<!--<li>-->
-										<!--<a href="#">Статьи</a>-->
-									<!--</li>-->
 									<!--Возможная ссылка-->
 									<!--<li>-->
 										<!--<a href="#">Contact us</a>-->
@@ -656,16 +399,16 @@
 										<a href="#"><i class="fa fa-instagram" style="padding-right: 20px; padding-left: 20px; padding-bottom: 10px;"></i></a>
 										<a href="#"><i class="fa fa-facebook"></i></a>
 								<address>
-								Адресс в Москве:<br>
-								ул.Мусы Джалиля,<br>
-								д.4, к.4,<br>
-									оффис №349<br>
+								<!--Адресс в Москве:<br>-->
+								<!--ул.Мусы Джалиля,<br>-->
+								<!--д.4, к.4,<br>-->
+									<!--оффис №349<br>-->
 								<i class="fa fa-phone"></i>
 									8-915-346-11-32<br>
 									<i class="fa fa-phone"></i>
 									8-499-725-32-93<br>
 								<i class="fa fa-envelope-o"></i>
-									<a href="mailto:ly4ok666@gmail.com">ly4ok666@gmail.com</a>
+									<a href="mailto:gidrosave@gmail.com">gidrosave@gmail.com</a>
 
 								</address>
 							</div>
@@ -680,7 +423,7 @@
 								<div class="col-sm-7 right-header">
 								<ul>
 									<li>
-										<a href="mailto:ly4ok666@gmail.com"><i class="fa fa-envelope-o"></i> ly4ok666@gmail.com</a>
+										<a href="mailto:ly4ok666@gmail.com"><i class="fa fa-envelope-o"></i>ly4ok666@gmail.com</a>
 									</li>
 									<li>
 										<a href="#"><i class="fa fa-vk"></i></a>
@@ -695,9 +438,9 @@
 							<!--</div>-->
 								<!--<span>Ly4ok666 | © 2017 Ly4ok_Industrial, All rights reserved</span>-->
 							<!--</div>-->
+							</div>
 						</div>
 					</div>
-				</div>
 					</div>
 				</div>
 			</footer>

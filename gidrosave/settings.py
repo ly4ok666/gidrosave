@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'home',
     'about',
     'content',
+    'article',
     'ckeditor',
     'ckeditor_uploader',
     'embed_video',
@@ -130,8 +131,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'ly4ok666@gmail.com'
-EMAIL_HOST_PASSWORD = '666ly4ok'
+EMAIL_HOST_USER = 'gidrosave@gmail.com'
+EMAIL_HOST_PASSWORD = 'BoochkovB666'
 EMAIL_PORT = 465
 EMAIL_USE_SSL = True
 # DEFAULT_FROM_EMAIL = 'mymail@mail.ru'

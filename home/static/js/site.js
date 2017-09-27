@@ -54,8 +54,8 @@ $(document).ready(function() {
 	$('.pro-slider').bxSlider({
 		mode : 'horizontal',
 		pager : false,
-		nextText : 'NEXT PROJECT',
-		prevText : 'PREVIOUS PROJECT'
+		nextText : 'Следующее',
+		prevText : 'Предыдущее'
 	});
 
 	$('.msg-slider ul').bxSlider({

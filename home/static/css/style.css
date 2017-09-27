@@ -1036,7 +1036,7 @@
  ----------------------------*/
 .service-container-2 {
 	background: #2d2c32;
-	padding: 104px 0 155px;
+	padding: 70px 0 80px;
 }
 .service-container-2 .left-detail {
 	float: left;
@@ -2459,13 +2459,23 @@
 	color: #636363;
 }
 .blog-container-1 .blog-list .more {
+	float: left;
+    width: 149px;
+    border: 2px solid #f79420;
+    /*color: #f79420;*/
+    text-align: center;
+    /*font-size: 14px;*/
+    line-height: 20px;
+    font-weight: 700;
+    padding: 12px;
+    letter-spacing: 1px;
 	display: inline-block;
-	font-size: 13px;
-	line-height: 15px;
+	font-size: 15px;
+	/*line-height: 15px;*/
 	color: #2d2c32;
-	font-weight: 700;
+	/*font-weight: 700;*/
 	letter-spacing: 1px;
-	margin-top: 11px;
+	margin-top: 25px;
 }
 .blog-container-1 .blog-list .more:hover {
 	color: #f38929;
@@ -2481,6 +2491,13 @@
 	width: 100%;
 }
 .pagination-box li {
+    width: 53px;
+    height: 48px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 48px;
+    color: #313538;
+    background: #f4f4f4;
 	display: inline-block;
 	margin: 0 5px;
 }
