@@ -1,5 +1,5 @@
 from django.conf.urls import url
-# from home.views import home
+from content.views import article
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
 from django.conf import settings
@@ -12,7 +12,7 @@ urlpatterns = [
     # # страница контента
     # url(r'^content/$', content, name='content'),
     # #конкретная статья
-    # url(r'^content/get/(?P<article_id>\d+)/$', article, name='статья'),
+    url(r'^content/get/(?P<article_id>\d+)/$', article, name='content'),
     # #Все статьи
     # url(r'^content/articles/$', articles, name='articles'),
     # #Статьи по страницам

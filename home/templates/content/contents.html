@@ -1,0 +1,33 @@
+{% extends 'content.html' %}
+{% load embed_video_tags %}
+{% load staticfiles %}
+
+{% block articles %}
+							{% for article in image_main %}
+								<div class="our-team-detail">
+									<ul>
+										<li class="zoom">
+											<div class="box clearfix">
+												{% if article.article_image %}
+												<figure class="img-box fade-effect">
+													<a href="{{ MEDIA_URL }}{{ article.article_image.url }}"><img src="{{ MEDIA_URL }}{{ article.article_image.url }}" alt="тест" /></a>
+												{% endif %}
+										<!--<div class="about-img" style="width: 366px; height: 320px;">-->
+											<!--<img src="{{ MEDIA_URL }}{{ about.about_image.url }}" alt="" class="rightimg" />-->
+
+												</figure>
+												<div class="detail-box animate-effect" style="height: 191px;">
+
+													<span class="name"><a href="/content/get/{{ article.id }}">{{ article.article_title }}<i></i></a></span>
+													<!--<span class="designation">CEO and Board Member <i></i></span>-->
+													<p>{% autoescape off %}{{ article.article_text|truncatechars:160 }}{% endautoescape %}</p>
+
+											</div>
+												<div class="social-list clearfix">
+														<a class="contact-us" href="/content/get/{{ article.id }}" style="float: right;">Подробнее</a>
+												</div>
+										</li>
+									</ul>
+								</div>
+								{% endfor %}
+{% endblock %}

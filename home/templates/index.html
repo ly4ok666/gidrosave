@@ -48,7 +48,7 @@
 		<!--Wrapper Section Start Here -->
 		<div id="wrapper">
 <div id="pageloader" class="row m0">
-        <div class="loader-item"><img src="assets/svg/grid.svg" alt="loading"></div>
+        <div class="loader-item"><img src="{% static 'svg/grid.svg' %}" alt="loading"></div>
     </div> 
 			<!--Шапка сайта, навигация-->
 			<header id="header">
@@ -60,6 +60,9 @@
 							</div>
 							<div class="col-sm-7 right-header">
 								<ul>
+									<li>
+										<span class="num">Вызов специалиста: 8-915-346-11-32</span>
+									</li>
 									<li>
 										<a href="mailto:gidrosave@gmail.com"><i class="fa fa-envelope-o"></i> gidrosave@gmail.com</a>
 									</li>
@@ -82,9 +85,6 @@
 						<div class="row">
 							<div class="col-xs-12 col-sm-4">
 								<a href="{% url 'home:home' %}" class="logo"><img src="{% static 'img/logo2.png' %}" alt="logo" /></a>
-								<span class="num">8-915-346-11-32</span>
-
-
 							</div>
 							<div class="col-xs-12 col-sm-8 menu-wrapper">
 								<div class="button-wrapper">
@@ -155,9 +155,9 @@
 			<section id="slider">
 				<ul class="top-banner">
 					<!--<li><img src="{% static 'img/test1.jpg' %}" alt="#" />-->
-					</li>
+					<!--</li>-->
 					<!--<li><img src="{% static 'img/test2.jpg' %}" alt="#" />-->
-					</li>
+					<!--</li>-->
 					<li><img src="{% static 'img/test3.jpg' %}" alt="#" />
 					</li>
 				</ul>

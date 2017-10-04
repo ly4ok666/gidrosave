@@ -61,7 +61,7 @@
 		<div id="wrapper">
 
  <div id="pageloader" class="row m0">
-        <div class="loader-item"><img src="assets/svg/grid.svg" alt="loading"></div>
+        <div class="loader-item"><img src="{% static 'svg/grid.svg' %}" alt="loading"></div>
     </div> 
 			<!--header Section Start Here -->
 			<header id="header">
@@ -73,6 +73,9 @@
 							</div>
 							<div class="col-sm-7 right-header">
 								<ul>
+									<li>
+										<span class="num">Вызов специалиста: 8-915-346-11-32</span>
+									</li>
 									<li>
 										<a href="mailto:gidrosave@gmail.com"><i class="fa fa-envelope-o"></i> gidrosave@gmail.com</a>
 									</li>
@@ -95,9 +98,6 @@
 						<div class="row">
 							<div class="col-xs-12 col-sm-4">
 								<a href="{% url 'home:home' %}" class="logo"><img src="{% static 'img/logo2.png' %}" alt="logo" /></a>
-								<span class="num">8-915-346-11-32</span>
-
-
 							</div>
 							<div class="col-xs-12 col-sm-8 menu-wrapper">
 								<div class="button-wrapper">
@@ -112,40 +112,10 @@
 										</li>
 										<li>
 											<a href="{% url 'home:about' %}">О Нас</a>
-											<!--Возможное подменю-->
-											<!--<ul class="submenu">-->
-												<!--<li>-->
-													<!--<a href="projects.html">projects</a>-->
-												<!--</li>-->
-												<!--<li>-->
-													<!--<a href="projects-1.html">projects-1</a>-->
-												<!--</li>-->
-												<!--<li>-->
-													<!--<a href="projects-2.html">projects-2</a>-->
-												<!--</li>-->
-												<!--<li>-->
-													<!--<a href="projects-details.html">projects-details</a>-->
-												<!--</li>-->
-											<!--</ul>-->
 										</li>
 										<li class="active">
 											<a href="{% url 'home:articles' %}">Наши работы</a>
 										</li>
-										<!--<li>-->
-											<!--<a href="#">Контакты</a>-->
-											<!--Возможное подменю-->
-											<!--<ul class="submenu">-->
-												<!--<li>-->
-													<!--<a href="about-us.html">about-us</a>-->
-												<!--</li>-->
-												<!--<li>-->
-													<!--<a href="about-us-1.html">about-us-1</a>-->
-												<!--</li>-->
-												<!--<li>-->
-													<!--<a href="faq.html">faq</a>-->
-												<!--</li>-->
-											<!--</ul>-->
-										<!--</li>-->
 										<li>
 											<a href="{% url 'home:blog' %}">Статьи</a>
 										</li>
@@ -193,208 +163,35 @@
 									</ul>
 								</div>
 							</div>
-
-							<!--<div class="col-xs-12 col-sm-6 ">-->
-								<!--<div class="about-detail">-->
-									<!--<h3> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ornare odio et massa  dignissim, <i></i></h3>-->
-									<!--<h4>OUR EXPERTS DELIVER INNOVATIVE, EFFICIENT & VALUE-DRIVEN-->
-									<!--SOLUTIONS FOR CUSTOMERS IN ENERGY.</h4>-->
-
-									<!--<p>-->
-										<!--BuildPress Inc traces its roots back to 1989 in Colorado and since then have never looked back. With thousands of successful projects under our belt, we can proudly say that we are one of the most trusted construction companies in Colorado performing both domestic and international construction work.-->
-									<!--</p>-->
-
-								<!--</div>-->
-							<!--</div>-->
-
-							<!--<div class="col-xs-12 col-sm-6 ">-->
-								<!--<div class="about-img">-->
-									<!--<img src="assets/img/image-16.jpg" alt="" class="coll" />-->
-									<!--<img src="assets/img/image-17.jpg" alt="" />-->
-									<!--<img src="assets/img/image-18.jpg" alt="" />-->
-								<!--</div>-->
-							<!--</div>-->
-
-						<!--</div>-->
-					<!--</div>-->
-				<!--</div>-->
-
-				<!--<div class="info-aboutus clearfix">-->
-					<!--<div class="left-banner fade-effect">-->
-						<!--<img src="assets/img/laft-banner-img.jpg" alt=""/>-->
-					<!--</div>-->
-					<!--<div class="container">-->
-						<!--<div class="row">-->
-							<!--<div class="col-xs-12">-->
-
-								<!--<div class="msg-slider animate-effect">-->
-									<!--<ul>-->
-										<!--<li>-->
-											<!--<div class="msg-box">-->
-												<!--<strong>CHAIRMAN MESSAGE</strong>-->
-												<!--<p>-->
-													<!--Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the  with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.-->
-												<!--</p>-->
-												<!--<strong>- Richard Parker, Chairman</strong>-->
-											<!--</div>-->
-											<!--<div class="award-box">-->
-												<!--<img src="assets/img/image-20.jpg" alt="" />-->
-												<!--<strong>AWARDS</strong>-->
-												<!--<img src="assets/img/image-19.jpg" alt="" />-->
-											<!--</div>-->
-										<!--</li>-->
-										<!--<li>-->
-											<!--<div class="msg-box">-->
-												<!--<strong>CHAIRMAN MESSAGE 2</strong>-->
-												<!--<p>-->
-													<!--Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the  with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.-->
-												<!--</p>-->
-												<!--<strong>- Richard Parker, Chairman</strong>-->
-											<!--</div>-->
-											<!--<div class="award-box">-->
-												<!--<img src="assets/img/image-20.jpg" alt="" />-->
-												<!--<strong>AWARDS 2</strong>-->
-												<!--<img src="assets/img/image-19.jpg" alt="" />-->
-											<!--</div>-->
-										<!--</li>-->
-										<!--<li>-->
-											<!--<div class="msg-box">-->
-												<!--<strong>CHAIRMAN MESSAGE 3</strong>-->
-												<!--<p>-->
-													<!--Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the  with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.-->
-												<!--</p>-->
-												<!--<strong>- Richard Parker, Chairman</strong>-->
-											<!--</div>-->
-											<!--<div class="award-box">-->
-												<!--<img src="assets/img/image-20.jpg" alt="" />-->
-												<!--<strong>AWARDS 3</strong>-->
-												<!--<img src="assets/img/image-19.jpg" alt="" />-->
-											<!--</div>-->
-										<!--</li>-->
-									<!--</ul>-->
-								<!--</div>-->
-
-								<!--<div class="our-detail animate-effect">-->
-									<!--<div class="box">-->
-										<!--<i class="icon-history"></i>-->
-										<!--<strong>COMPANY HISTORY</strong>-->
-										<!--<p>-->
-											<!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ornare odio et massa dignissim, at accumsan metus viverra. Integer neque lectus.-->
-										<!--</p>-->
-									<!--</div>-->
-									<!--<div class="box">-->
-										<!--<i class="icon-mission"></i>-->
-										<!--<strong>OUR MISSION</strong>-->
-										<!--<p>-->
-											<!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ornare odio et massa dignissim, at accumsan metus viverra. Integer neque lectus.-->
-										<!--</p>-->
-									<!--</div>-->
-								<!--</div>-->
-							<!--</div>-->
-						<!--</div>-->
-					<!--</div>-->
-
-				<!--</div>-->
 				{% block articles %}{% endblock %}
 				<div class="our-team-container">
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-12">
-								<!--<h3>OUR TEAM <i></i></h3>-->
-								<!--<h4>WE OFFER AN ALL ROUND CONDO REMODELLING SERVICES</h4>-->
-								{% for article in articles %}
+								{% for image_main in images_main %}
 								<div class="our-team-detail">
 									<ul>
 										<li class="zoom">
 											<div class="box clearfix">
-												{% if article.article_image %}
+
 												<figure class="img-box fade-effect">
-													<a href="{{ MEDIA_URL }}{{ article.article_image.url }}"><img src="{{ MEDIA_URL }}{{ article.article_image.url }}" alt="тест" /></a>
-												{% endif %}
+													<a href="{{ MEDIA_URL }}{{ article.article_image.url }}"><img src="{{ MEDIA_URL }}{{ image_main.image.url }}" alt="тест" /></a>
+
 										<!--<div class="about-img" style="width: 366px; height: 320px;">-->
 											<!--<img src="{{ MEDIA_URL }}{{ about.about_image.url }}" alt="" class="rightimg" />-->
 
 												</figure>
 												<div class="detail-box animate-effect" style="height: 191px;">
 
-													<span class="name"><a href="/content/get/{{ article.id }}">{{ article.article_title }}<i></i></a></span>
+													<span class="name"><a href="{% url 'content' image_main.article.id %}">{{ image_main.article.article_title }}<i></i></a></span>
 													<!--<span class="designation">CEO and Board Member <i></i></span>-->
-													<p>{% autoescape off %}{{ article.article_text }}{% endautoescape %}</p>
-
-											</div>
-												<div class="social-list clearfix">
-														<a class="contact-us" href="/content/get/{{ article.id }}">Подробнее</a>
+													<p>{% autoescape off %}{{ image_main.article.article_text|truncatechars:160 }}{% endautoescape %}</p>
 												</div>
+												<div class="social-list clearfix">
+													<a class="contact-us" href="{% url 'content' image_main.article.id %}" style="float: right;">Подробнее</a>
+												</div>
+											</div>
 										</li>
-										<!--<li class="zoom">-->
-											<!--<div class="box clearfix">-->
-												<!--<figure class="img-box fade-effect">-->
-													<!--<a href="#"><img src="{% static 'img/tm-5.jpg' %}" alt="" /></a>-->
-												<!--</figure>-->
-												<!--<div class="detail-box animate-effect">-->
-													<!--<span class="name"><a href="#">GEORGE QUICK</a></span>-->
-													<!--<span class="designation">CEO and Board Member <i></i></span>-->
-													<!--<p>-->
-														<!--Lorem ipsum dolor sit amet, consectetur adipiscing elitInteger ornare odio .-->
-													<!--</p>-->
-													<!--<div class="social-list clearfix">-->
-
-														<!--<a class="fa fa-facebook" href="#"></a>-->
-
-														<!--<a class="fa fa-twitter" href="#"></a>-->
-
-														<!--<a class="fa fa-google-plus" href="#"></a>-->
-
-													<!--</div>-->
-												<!--</div>-->
-											<!--</div>-->
-										<!--</li>-->
- 										<!--<li class="zoom">-->
-											<!--<div class="box clearfix">-->
-												<!--<figure class="img-box fade-effect">-->
-													<!--<a href="#"><img src="{% static 'img/tm-6.jpg' %}" alt="" /></a>-->
-												<!--</figure>-->
-												<!--<div class="detail-box animate-effect">-->
-													<!--<span class="name"><a href="#">GEORGE QUICK</a></span>-->
-													<!--<span class="designation">CEO and Board Member <i></i></span>-->
-													<!--<p>-->
-														<!--Lorem ipsum dolor sit amet, consectetur adipiscing elitInteger ornare odio .-->
-													<!--</p>-->
-													<!--<div class="social-list clearfix">-->
-
-														<!--<a class="fa fa-facebook" href="#"></a>-->
-
-														<!--<a class="fa fa-twitter" href="#"></a>-->
-
-														<!--<a class="fa fa-google-plus" href="#"></a>-->
-
-													<!--</div>-->
-												<!--</div>-->
-											<!--</div>-->
-										<!--</li>-->
-										<!--<li class="zoom">-->
-											<!--<div class="box clearfix">-->
-												<!--<figure class="img-box fade-effect">-->
-													<!--<a href="#"><img src="{% static 'img/tm-7.jpg' %}" alt="" /></a>-->
-												<!--</figure>-->
-												<!--<div class="detail-box animate-effect">-->
-													<!--<span class="name"><a href="#">GEORGE QUICK</a></span>-->
-													<!--<span class="designation">CEO and Board Member <i></i></span>-->
-													<!--<p>-->
-														<!--Lorem ipsum dolor sit amet, consectetur adipiscing elitInteger ornare odio .-->
-													<!--</p>-->
-													<!--<div class="social-list clearfix">-->
-
-														<!--<a class="fa fa-facebook" href="#"></a>-->
-
-														<!--<a class="fa fa-twitter" href="#"></a>-->
-
-														<!--<a class="fa fa-google-plus" href="#"></a>-->
-
-													<!--</div>-->
-												<!--</div>-->
-											<!--</div>-->
-										<!--</li>-->
 									</ul>
 								</div>
 								{% endfor %}
@@ -452,6 +249,32 @@
 				</div>
 				<!--contact-us container End Here -->
 
+				<footer id="footer">
+
+
+				<div class="contact-us-container">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 animate-effect">
+								<div class="box">
+								</div>
+
+								<div class="box call">
+								</div>
+
+								<div class="box" style="height: 128px">
+									<ul class="clearfix">
+									</ul>
+								</div>
+
+								<div class="box call">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--contact-us container End Here -->
+
 				<div class="primary-footer">
 					<div class="container">
 						<div class="row animate-effect">
@@ -474,7 +297,7 @@
 										<a href="{% url 'home:about' %}">О нас</a>
 									</li>
 									<li>
-										<a href="{% url 'home:articles' %}">Гидроизол</a>
+										<a href="{% url 'home:articles' %}">Наши работы</a>
 									</li>
 									<li>
 										<a href="{% url 'home:blog' %}">Статьи</a>
@@ -495,16 +318,16 @@
 										<a href="#"><i class="fa fa-instagram" style="padding-right: 20px; padding-left: 20px; padding-bottom: 10px;"></i></a>
 										<a href="#"><i class="fa fa-facebook"></i></a>
 								<address>
-								Адресс в Москве:<br>
-								ул.Мусы Джалиля,<br>
-								д.4, к.4,<br>
-									оффис №349<br>
+								<!--Адресс в Москве:<br>-->
+								<!--ул.Мусы Джалиля,<br>-->
+								<!--д.4, к.4,<br>-->
+									<!--оффис №349<br>-->
 								<i class="fa fa-phone"></i>
 									8-915-346-11-32<br>
 									<i class="fa fa-phone"></i>
 									8-499-725-32-93<br>
 								<i class="fa fa-envelope-o"></i>
-									<a href="mailto:ly4ok666@gmail.com">ly4ok666@gmail.com</a>
+									<a href="mailto:gidrosave@gmail.com">gidrosave@gmail.com</a>
 
 								</address>
 							</div>
@@ -519,7 +342,7 @@
 								<div class="col-sm-7 right-header">
 								<ul>
 									<li>
-										<a href="mailto:ly4ok666@gmail.com"><i class="fa fa-envelope-o"></i> ly4ok666@gmail.com</a>
+										<a href="mailto:ly4ok666@gmail.com"><i class="fa fa-envelope-o"></i>ly4ok666@gmail.com</a>
 									</li>
 									<li>
 										<a href="#"><i class="fa fa-vk"></i></a>
@@ -534,9 +357,9 @@
 							<!--</div>-->
 								<!--<span>Ly4ok666 | © 2017 Ly4ok_Industrial, All rights reserved</span>-->
 							<!--</div>-->
+							</div>
 						</div>
 					</div>
-				</div>
 					</div>
 				</div>
 			</footer>

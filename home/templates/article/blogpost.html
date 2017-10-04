@@ -48,7 +48,7 @@
 	
 <div id="wrapper">
  <div id="pageloader" class="row m0">
-       <div class="loader-item"><img src="assets/svg/grid.svg" alt="loading"></div>
+       <div class="loader-item"><img src="{% static 'svg/grid.svg' %}" alt="loading"></div>
     </div> 
 			<!--header Section Start Here -->
 			<header id="header">
@@ -60,6 +60,9 @@
 							</div>
 							<div class="col-sm-7 right-header">
 								<ul>
+									<li>
+										<span class="num">Вызов специалиста: 8-915-346-11-32</span>
+									</li>
 									<li>
 										<a href="mailto:gidrosave@gmail.com"><i class="fa fa-envelope-o"></i> gidrosave@gmail.com</a>
 									</li>
@@ -82,9 +85,6 @@
 						<div class="row">
 							<div class="col-xs-12 col-sm-4">
 								<a href="{% url 'home:home' %}" class="logo"><img src="{% static 'img/logo2.png' %}" alt="logo" /></a>
-								<span class="num">8-915-346-11-32</span>
-
-
 							</div>
 							<div class="col-xs-12 col-sm-8 menu-wrapper">
 								<div class="button-wrapper">
@@ -99,40 +99,10 @@
 										</li>
 										<li>
 											<a href="{% url 'home:about' %}">О Нас</a>
-											<!--Возможное подменю-->
-											<!--<ul class="submenu">-->
-												<!--<li>-->
-													<!--<a href="projects.html">projects</a>-->
-												<!--</li>-->
-												<!--<li>-->
-													<!--<a href="projects-1.html">projects-1</a>-->
-												<!--</li>-->
-												<!--<li>-->
-													<!--<a href="projects-2.html">projects-2</a>-->
-												<!--</li>-->
-												<!--<li>-->
-													<!--<a href="projects-details.html">projects-details</a>-->
-												<!--</li>-->
-											<!--</ul>-->
 										</li>
 										<li>
 											<a href="{% url 'home:articles' %}">Наши работы</a>
 										</li>
-										<!--<li>-->
-											<!--<a href="#">Контакты</a>-->
-											<!--Возможное подменю-->
-											<!--<ul class="submenu">-->
-												<!--<li>-->
-													<!--<a href="about-us.html">about-us</a>-->
-												<!--</li>-->
-												<!--<li>-->
-													<!--<a href="about-us-1.html">about-us-1</a>-->
-												<!--</li>-->
-												<!--<li>-->
-													<!--<a href="faq.html">faq</a>-->
-												<!--</li>-->
-											<!--</ul>-->
-										<!--</li>-->
 										<li class="active">
 											<a href="{% url 'home:blog' %}">Статьи</a>
 										</li>
@@ -190,28 +160,13 @@
 								<div class="inner-content">
 
 									<div class="post-list">
-										<h3>Awesome Posts <i></i></h3>
+										<h3>Интересные статьи <i></i></h3>
 										<ul>
-
+											{% for articles in article %}
 											<li>
-												<a href="/articles/get/{{ article.id }}">{{ articles.article_title }}</a>
+												<a href="/articles/get/{{ articles.id }}">{{ articles.article_title|truncatechars:34 }}</a>
 											</li>
-
-											<li>
-												<a href="/articles/get/{{ article.id }}">{{ articles.article_title }}</a>
-											</li>
-											<li>
-												<a href="#">Make your living room  enjoyable</a>
-											</li>
-											<li>
-												<a href="#">How Important is Light in the Room?</a>
-											</li>
-											<li>
-												<a href="#">Become a master of backyard tiling</a>
-											</li>
-											<li>
-												<a href="#">How Important is Light in the Room?</a>
-											</li>
+											{% endfor %}
 										</ul>
 									</div>
 
@@ -219,16 +174,16 @@
 										<h3>Карта сайта <i></i></h3>
 										<ul>
 											<li>
-												<a href="#">Главная</a>
+												<a href="{% url 'home:home' %}">Главная</a>
 											</li>
 											<li>
-												<a href="#">О нас</a>
+												<a href="{% url 'home:home' %}">О нас</a>
 											</li>
 											<li>
-												<a href="#">Работы</a>
+												<a href="{% url 'home:articles' %}">Наши работы</a>
 											</li>
 											<li>
-												<a href="#">Контакты</a>
+												<a href="{% url 'home:contact' %}">Контакты</a>
 											</li>
 										</ul>
 									</div>
@@ -237,21 +192,17 @@
 										<!--<h3><i></i></h3>-->
 										<ul class="clearfix">
 											<li>
-												<a href="#" class="tag-6"><i class="second"></i> Вернуться назад к статьям</a>
+												<a href="{% url 'home:blog' %}" class="tag-6"><i class="second"></i> Вернуться назад к статьям</a>
 
 											</li>
 										</ul>
 									</div>
-
 								</div>
 							</div>
 
 							<div class="col-xs-12 col-sm-8 left-body ">
 
 								<article class="full-box post">
-									<figure>
-										<img src="{% static 'img/blog-img-5.jpg' %}" alt="" class="img2" />
-									</figure>
 									<div class="detail animate-effect">
 										<ul class="post-detail clearfix">
 											<li>
@@ -262,9 +213,6 @@
 											</li>
 										</ul>
 										<h3>{{ articles.article_title }} <i></i></h3>
-										<div class="media-detail">
-											<img src="{% static 'img/media-img.jpg' %}" alt="" />
-										</div>
 										<div class="post-msg">
 											<p>
 												{% autoescape off %}{{ articles.article_text }}{% endautoescape %}
@@ -273,7 +221,6 @@
 
 									</div>
 								</article>
-
 							</div>
 						</div>
 					</div>
@@ -330,7 +277,7 @@
 										<a href="{% url 'home:about' %}">О нас</a>
 									</li>
 									<li>
-										<a href="{% url 'home:articles' %}">Гидроизол</a>
+										<a href="{% url 'home:articles' %}">Наши работы</a>
 									</li>
 									<li>
 										<a href="{% url 'home:blog' %}">Статьи</a>
@@ -351,16 +298,16 @@
 										<a href="#"><i class="fa fa-instagram" style="padding-right: 20px; padding-left: 20px; padding-bottom: 10px;"></i></a>
 										<a href="#"><i class="fa fa-facebook"></i></a>
 								<address>
-								Адресс в Москве:<br>
-								ул.Мусы Джалиля,<br>
-								д.4, к.4,<br>
-									оффис №349<br>
+								<!--Адресс в Москве:<br>-->
+								<!--ул.Мусы Джалиля,<br>-->
+								<!--д.4, к.4,<br>-->
+									<!--оффис №349<br>-->
 								<i class="fa fa-phone"></i>
 									8-915-346-11-32<br>
 									<i class="fa fa-phone"></i>
 									8-499-725-32-93<br>
 								<i class="fa fa-envelope-o"></i>
-									<a href="mailto:ly4ok666@gmail.com">ly4ok666@gmail.com</a>
+									<a href="mailto:gidrosave@gmail.com">gidrosave@gmail.com</a>
 
 								</address>
 							</div>
@@ -375,7 +322,7 @@
 								<div class="col-sm-7 right-header">
 								<ul>
 									<li>
-										<a href="mailto:ly4ok666@gmail.com"><i class="fa fa-envelope-o"></i> ly4ok666@gmail.com</a>
+										<a href="mailto:ly4ok666@gmail.com"><i class="fa fa-envelope-o"></i>ly4ok666@gmail.com</a>
 									</li>
 									<li>
 										<a href="#"><i class="fa fa-vk"></i></a>
@@ -387,6 +334,9 @@
 										<a href="#"><i class="fa fa-facebook"></i></a>
 									</li>
 								</ul>
+							<!--</div>-->
+								<!--<span>Ly4ok666 | © 2017 Ly4ok_Industrial, All rights reserved</span>-->
+							<!--</div>-->
 							</div>
 						</div>
 					</div>
@@ -397,7 +347,7 @@
 
 		</div>
 		<!--Wrapper Section End Here -->
-<script src="{% static 'js/jquery-1.11.2.min.js' %}"></script>
+        <script src="{% static 'js/jquery-1.11.2.min.js' %}"></script>
 		<script src="{% static 'js/bootstrap.min.js' %}"></script>
 		<script src="{% static 'js/less.js' %}"></script>
 		<script src="{% static 'js/jquery.bxslider.js' %}"></script>

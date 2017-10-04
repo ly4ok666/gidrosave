@@ -8,9 +8,9 @@ from django.core.mail import send_mail, BadHeaderError
 from django.shortcuts import render_to_response
 from home.models import Home
 from about.models import About, ShortAbout
-from content.models import Article, Features
+from content.models import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from article.models import Blog
+from article.models import *
 
 
 
@@ -31,21 +31,22 @@ def about(request):
     return render(request, 'about.html', locals())
 
 def content(request):
-    # article = {'article': Article.objects.get(id=article_id)}
+    images_main = ContentImages.objects.filter(is_active=True, is_main=True)
     #Вывод всех статей и пагинация (2 статьи на страницу)"""
     # краткое о нас
     abouts = ShortAbout.objects.all()
-    all_Articles = Article.objects.all()
-    paginator = Paginator(all_Articles, 4)
-    page = request.GET.get('page')
-
-    try:
-        articles = paginator.page(page)
-    except PageNotAnInteger:
-        articles = paginator.page(1)
-    except EmptyPage:
-        articles = paginator.page(paginator.num_pages)
-    context = {'articles': articles}
+    # all_Articles = Article.objects.all()
+    # paginator = Paginator(all_Articles, 4)
+    # page = request.GET.get('page')
+    #
+    # try:
+    #     articles = paginator.page(page)
+    # except PageNotAnInteger:
+    #     articles = paginator.page(1)
+    # except EmptyPage:
+    #     articles = paginator.page(paginator.num_pages)
+    # context = {'articles': articles}
+    # image_main = {'images_main': images_main}
     return render(request, 'content.html', locals())
 
 def article(request,article_id=1):
@@ -97,18 +98,19 @@ def blog(request):
     # article = {'article': Article.objects.get(id=article_id)}
     #Вывод всех статей и пагинация (2 статьи на страницу)"""
     # краткое о нас
+    # images_main = ContentImages.objects.filter(is_active=True, is_main=True)
     abouts = ShortAbout.objects.all()
-    all_Articles = Blog.objects.all()
-    paginator = Paginator(all_Articles, 1)
-    page = request.GET.get('page')
-
-    try:
-        articles = paginator.page(page)
-    except PageNotAnInteger:
-        articles = paginator.page(1)
-    except EmptyPage:
-        articles = paginator.page(paginator.num_pages)
-    context = {'articles': articles}
+    blogs_main = BlogImages.objects.filter(is_active=True, is_main=True)
+    # paginator = Paginator(all_Articles, 1)
+    # page = request.GET.get('page')
+    #
+    # try:
+    #     articles = paginator.page(page)
+    # except PageNotAnInteger:
+    #     articles = paginator.page(1)
+    # except EmptyPage:
+    #     articles = paginator.page(paginator.num_pages)
+    # context = {'articles': articles}
     return render(request, 'blog.html', locals())
 
 def blogpost(request,article_id=1):
@@ -118,4 +120,4 @@ def blogpost(request,article_id=1):
     # articles = Article.objects.get(id=article_id)
     # features = Features.objects.filter(features_article_id=article_id)
     # return render(request, 'home/article.html', locals())
-    return render_to_response('article/blogpost.html', {'articles': Blog.objects.get(id=article_id),'abouts': abouts})
+    return render_to_response('article/blogpost.html', {'articles': Blog.objects.get(id=article_id),'abouts': abouts, 'article': Blog.objects.all()})

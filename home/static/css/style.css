@@ -377,12 +377,15 @@
 	float: left;
 	border-radius: 3px;
 	margin-left: 6px;
+	margin-bottom: 6px;
+    margin-top: 6px;
+    margin-right: 3px;
 }
 .our-service li figure {
 	overflow: hidden;
 }
 .our-service li:first-child {
-	margin: 0;
+	margin: 6px;
 }
 .our-service li a {
 	display: block;
@@ -2546,7 +2549,7 @@
 	width: 100%;
 	padding: 59px 30px 49px 58px;
 	border: 1px solid #eeecec;
-	border-top: none;
+	/*border-top: none;*/
 }
 .blog-container-2 .left-body .half-box .detail {
 	padding: 33px 32px;
@@ -2818,7 +2821,7 @@ border-color: rgba(0,0,0,0.3) transparent transparent;
 	background: #6b6b6b;
 }
 .blog-container-2 .right-body .meta-list li a.tag-6 {
-	width: 114px;
+	width: 200px;
 	background: #f38929;
 }
 
@@ -4096,6 +4099,8 @@ input.error {
 .project-discription .right-content .img-box li {
 	float: left;
 	width: 50%;
+	/*width: 227px;*/
+	/*height: 150px;*/
 	padding: 0 0 3px 3px;
 }
 .project-discription .right-content .img-box li figure {

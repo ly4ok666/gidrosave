@@ -18,7 +18,7 @@ urlpatterns = [
     # страница о компании
     url(r'^about-us/$', about, name='about'),
     #конкретная статья
-    url(r'^content/get/(?P<article_id>\d+)/$', article, name='статья'),
+    url(r'^content/get/(?P<article_id>\d+)/$', article, name='article'),
     #Все статьи
      url(r'^content/$', content, name='articles'),
     # Все статьи блога
@@ -26,7 +26,7 @@ urlpatterns = [
     #Статьи по страницам блога
     url(r'^articles/page/(\d+)/$', blog),
     #конкретная статья блога
-    url(r'^articles/get/(?P<article_id>\d+)/$', blogpost, name='статья'),
+    url(r'^articles/get/(?P<article_id>\d+)/$', blogpost, name='post'),
     #Страница с контактами
     url(r'^contact/$', contact, name='contact'),
      ]
