@@ -132,7 +132,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'gidrosave@gmail.com'
-EMAIL_HOST_PASSWORD = 'BoochkovB666'
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 465
 EMAIL_USE_SSL = True
 # DEFAULT_FROM_EMAIL = 'mymail@mail.ru'
